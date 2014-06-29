@@ -1,15 +1,15 @@
 #include "Bazowa.h"
 #include "Procesor.h"
-#include <stdio.h>
-#include <conio.h>
+#include "Pamiec.h"
+#include "Plyta.h"
+
 #include <string>
-#include <iostream>
 #include <vector>
 #include <fstream>
 #include <Windows.h>
 #include <stdlib.h>
 #include <iomanip>
-using namespace std;
+
  
 
  

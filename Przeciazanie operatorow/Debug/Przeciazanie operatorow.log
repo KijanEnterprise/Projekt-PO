@@ -1,59 +1,62 @@
-﻿Build started 2014-06-29 15:54:12.
-     1>Project "c:\Users\alexc_000\documents\visual studio 2010\Projects\Przeciazanie operatorow\Przeciazanie operatorow\Przeciazanie operatorow.vcxproj" on node 2 (build target(s)).
+﻿Build started 2014-06-29 16:43:39.
+     1>Project "C:\Users\alexc_000\Documents\Projekt-PO\Przeciazanie operatorow\Przeciazanie operatorow.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "Debug\Przeciazanie operatorow.unsuccessfulbuild".
+         Touching "Debug\Projekt PO.unsuccessfulbuild".
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(318): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(328): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(338): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(348): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(359): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(369): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(379): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(389): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(436): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(437): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(438): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(439): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(440): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(441): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(442): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(443): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(452): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(453): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(465): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(469): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(473): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(477): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(481): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(485): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(489): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(493): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(500): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(507): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(518): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(532): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(546): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(560): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(574): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(588): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(602): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(616): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(630): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\visual studio 2010\projects\przeciazanie operatorow\przeciazanie operatorow\main.cpp(644): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(255): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(265): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(275): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(285): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(296): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(306): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(316): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(326): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(373): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(374): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(375): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(376): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(377): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(378): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(379): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(380): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(389): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(390): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(402): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(406): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(410): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(414): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(418): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(422): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(426): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(430): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(437): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(444): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(455): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(469): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(483): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(497): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(511): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(525): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(539): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(553): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(567): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(581): warning C4018: '<' : signed/unsigned mismatch
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\alexc_000\documents\visual studio 2010\Projects\Przeciazanie operatorow\Debug\Przeciazanie operatorow.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Przeciazanie operatorow.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"c:\users\alexc_000\documents\visual studio 2010\Projects\Przeciazanie operatorow\Debug\Przeciazanie operatorow.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\alexc_000\documents\visual studio 2010\Projects\Przeciazanie operatorow\Debug\Przeciazanie operatorow.lib" /MACHINE:X86 Debug\Bazowa.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\alexc_000\Documents\Projekt-PO\Debug\Projekt PO.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Projekt PO.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\alexc_000\Documents\Projekt-PO\Debug\Projekt PO.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\alexc_000\Documents\Projekt-PO\Debug\Projekt PO.lib" /MACHINE:X86 Debug\Bazowa.obj
          Debug\main.obj
-         Przeciazanie operatorow.vcxproj -> c:\users\alexc_000\documents\visual studio 2010\Projects\Przeciazanie operatorow\Debug\Przeciazanie operatorow.exe
+         Debug\Pamiec.obj
+         Debug\Plyta.obj
+         Debug\Procesor.obj
+         Przeciazanie operatorow.vcxproj -> C:\Users\alexc_000\Documents\Projekt-PO\Debug\Projekt PO.exe
        Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"c:\users\alexc_000\documents\visual studio 2010\Projects\Przeciazanie operatorow\Debug\Przeciazanie operatorow.exe;#1" /manifest "Debug\Przeciazanie operatorow.exe.intermediate.manifest"
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\alexc_000\Documents\Projekt-PO\Debug\Projekt PO.exe;#1" /manifest "Debug\Projekt PO.exe.intermediate.manifest"
        FinalizeBuildStatus:
-         Deleting file "Debug\Przeciazanie operatorow.unsuccessfulbuild".
-         Touching "Debug\Przeciazanie operatorow.lastbuildstate".
-     1>Done Building Project "c:\Users\alexc_000\documents\visual studio 2010\Projects\Przeciazanie operatorow\Przeciazanie operatorow\Przeciazanie operatorow.vcxproj" (build target(s)).
+         Deleting file "Debug\Projekt PO.unsuccessfulbuild".
+         Touching "Debug\Projekt PO.lastbuildstate".
+     1>Done Building Project "C:\Users\alexc_000\Documents\Projekt-PO\Przeciazanie operatorow\Przeciazanie operatorow.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.77
+Time Elapsed 00:00:02.71
