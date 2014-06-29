@@ -63,11 +63,13 @@
   <ItemGroup>
     <ClCompile Include="Bazowa.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Pamiec.cpp" />
     <ClCompile Include="Plyta.cpp" />
     <ClCompile Include="Procesor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bazowa.h" />
+    <ClInclude Include="Pamiec.h" />
     <ClInclude Include="Plyta.h" />
     <ClInclude Include="Procesor.h" />
   </ItemGroup>

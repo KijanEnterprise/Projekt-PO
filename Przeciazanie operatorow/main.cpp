@@ -18,24 +18,7 @@ using namespace std;
  
 
  
-class Pamiec: public Bazowa
-{
-private:
-	int rozmiar;
-	string typ; // typy np. DDR3, DDR2 itd.    oraz   Pamiêæ masowa SSD, HDD
-public:
-	Pamiec(string _producent, string _model, string _typ, int _rozmiar, float _cena);
-	void Wyswietl();
-	int Getrozmiar()
-	{
-		return rozmiar;
-	};
-	string Gettyp()
-	{
-		return typ;
-	};
-};
- 
+
 class Grafika: public Bazowa
 {
 private:
@@ -133,9 +116,7 @@ public:
  
 
  
-Pamiec::Pamiec(string _producent, string _model, string _typ, int _rozmiar, float _cena):
-Bazowa(_producent, _model,_cena), typ(_typ), rozmiar(_rozmiar)
-{}
+
  
 Grafika::Grafika(string _producent, string _model, int _pamiec, int _zegar, float _cena):
 Bazowa(_producent, _model,_cena), pamiec(_pamiec), zegar(_zegar)
@@ -164,10 +145,7 @@ Bazowa(_producent, _model,_cena), moc(_moc)
  
 
  
-void Pamiec::Wyswietl()
-{
-	cout << Bazowa::Getproducent() << "\t" << Bazowa::Getmodel() << "\t" << typ << "\t" << rozmiar << "\t" << Bazowa::Getcena() << " zl" << endl;
-}
+
  
 void Grafika::Wyswietl()
 {
