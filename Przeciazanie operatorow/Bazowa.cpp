@@ -1,6 +1,6 @@
 #include "Bazowa.h"
 
-Bazowa::Bazowa(string _producent, string _model, float _cena):
+Bazowa::Bazowa(const string _producent,const string _model,const float _cena):
 producent(_producent), model(_model), cena(_cena)
 {}
 

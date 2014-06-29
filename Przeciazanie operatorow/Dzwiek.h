@@ -8,18 +8,18 @@ private:
 	int czestotliwosc;
 	float rodzaj; // np. 5.1 7.1 2.1 2.0 itd.
 public:
-	Dzwiek(string _producent, string _model, int _probkowanie, int _czestotliwosc, float rodzaj, float _cena);
+	Dzwiek(const string _producent,const string _model,const int _probkowanie,const int _czestotliwosc,const float rodzaj,const float _cena);
 	void Wyswietl();
 	int Getprobkowanie()
 	{
 		return probkowanie;
-	};
+	}
 	int Getczestotliwosc()
 	{
 		return czestotliwosc;
-	};
+	}
 	float Getrodzaj()
 	{
 		return rodzaj;
-	};
+	}
 };

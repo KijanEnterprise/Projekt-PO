@@ -1,6 +1,6 @@
 #include "Procesor.h"
 
-Procesor::Procesor(string _producent, string _model, float _taktowanie, int _rdzenie, float _cena):
+Procesor::Procesor(const string _producent,const string _model,const float _taktowanie,const int _rdzenie,const float _cena):
 Bazowa(_producent, _model,_cena), taktowanie(_taktowanie), rdzenie(_rdzenie)
 {}
 

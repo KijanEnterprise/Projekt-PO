@@ -11,7 +11,7 @@ private:
 	string model;
 	float cena;
 public:
-	Bazowa(string _producent, string _model, float _cena);
+	Bazowa(const string _producent,const string _model,const float _cena);
 	string Getproducent();
 	string Getmodel();
 	float Getcena();

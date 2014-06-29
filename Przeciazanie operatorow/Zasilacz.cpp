@@ -1,6 +1,6 @@
 #include "Zasilacz.h"
 
-Zasilacz::Zasilacz(string _producent, string _model, int _moc, float _cena):
+Zasilacz::Zasilacz(const string _producent,const string _model,const int _moc,const float _cena):
 Bazowa(_producent, _model,_cena), moc(_moc)
 {}
 

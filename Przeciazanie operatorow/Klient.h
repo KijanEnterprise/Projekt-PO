@@ -5,5 +5,6 @@
 class Klient: public Czlowiek
 {
 public:
-	Klient(string _imie, string _nazwisko, string _telefon, string _ulica, string _miasto, string _email, int _id);
+	Klient(const string _imie,const string _nazwisko,const string _telefon,const string _ulica,const string _miasto,const string _email,
+	const int _id);
 };

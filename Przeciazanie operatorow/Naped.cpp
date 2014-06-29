@@ -1,6 +1,6 @@
 #include "Naped.h"
 
-Naped::Naped(string _producent, string _model, string _naped, int _szybkosc, float _cena):
+Naped::Naped(const string _producent,const string _model,const string _naped,const int _szybkosc,const float _cena):
 Bazowa(_producent, _model,_cena), naped(_naped), szybkosc(_szybkosc)
 {}
 

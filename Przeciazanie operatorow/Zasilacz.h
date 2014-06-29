@@ -6,10 +6,10 @@ class Zasilacz: public Bazowa
 private:
 	int moc;
 public:
-	Zasilacz(string _producent, string _model, int _moc, float _cena);
+	Zasilacz(const string _producent,const string _model,const int _moc,const float _cena);
 	void Wyswietl();
 	int Getmoc()
 	{
 		return moc;
-	};
+	}
 };

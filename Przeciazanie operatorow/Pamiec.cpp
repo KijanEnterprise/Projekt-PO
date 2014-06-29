@@ -1,6 +1,6 @@
 #include "Pamiec.h"
 
-Pamiec::Pamiec(string _producent, string _model, string _typ, int _rozmiar, float _cena):
+Pamiec::Pamiec(const string _producent,const string _model,const string _typ,const int _rozmiar,const float _cena):
 Bazowa(_producent, _model,_cena), typ(_typ), rozmiar(_rozmiar)
 {}
 

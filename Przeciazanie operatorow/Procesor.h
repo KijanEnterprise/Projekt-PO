@@ -8,14 +8,14 @@ private:
 	float taktowanie;
 	int rdzenie;
 public:
-	Procesor(string _producent, string _model, float _taktowanie, int _rdzenie, float _cena);
+	Procesor(const string _producent,const string _model,const float _taktowanie,const int _rdzenie,const float _cena);
 	void Wyswietl();
 	float Gettaktowanie()
 	{
 		return taktowanie;
-	};
+	}
 	int Getrdzenie()
 	{
 		return rdzenie;
-	};
+	}
 };

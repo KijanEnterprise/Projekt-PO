@@ -1,6 +1,6 @@
 #include "Grafika.h"
 
-Grafika::Grafika(string _producent, string _model, int _pamiec, int _zegar, float _cena):
+Grafika::Grafika(const string _producent,const string _model,const int _pamiec,const int _zegar,const float _cena):
 Bazowa(_producent, _model,_cena), pamiec(_pamiec), zegar(_zegar)
 {}
 

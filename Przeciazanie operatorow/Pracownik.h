@@ -11,6 +11,7 @@ class Pracownik: public Czlowiek
 private:
 	int wynagrodzenie;
 public:
-	Pracownik(string _imie, string _nazwisko, string _telefon, string _ulica, string _miasto, string _email, int _id, int _wynagrodzenie);
+	Pracownik(const string _imie,const string _nazwisko,const string _telefon,const string _ulica,const string _miasto,const string _email,
+	const int _id,const int _wynagrodzenie);
 	void Wyswietl();
 };

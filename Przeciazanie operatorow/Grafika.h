@@ -7,14 +7,14 @@ private:
 	int pamiec;
 	int zegar;
 public:
-	Grafika(string _producent, string _model, int _pamiec, int _zegar, float _cena);
+	Grafika(const string _producent,const string _model,const int _pamiec,const int _zegar,const float _cena);
 	void Wyswietl();
 	int Getpamiec()
 	{
 		return pamiec;
-	};
+	}
 	int Getzegar()
 	{
 		return zegar;
-	};
+	}
 };

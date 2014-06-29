@@ -1,6 +1,6 @@
 #include "Plyta.h"
 
-Plyta::Plyta(string _producent, string _model, string _chipset, string _socket, float _cena):
+Plyta::Plyta(const string _producent,const string _model,const string _chipset,const string _socket,const float _cena):
 Bazowa(_producent, _model,_cena), chipset(_chipset), socket(_socket)
 {}
 

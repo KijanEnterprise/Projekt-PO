@@ -1,6 +1,6 @@
 #include "Siec.h"
 
-Siec::Siec(string _producent, string _model, int _predkosc, string _typ, float _cena):
+Siec::Siec(const string _producent,const string _model,const int _predkosc,const string _typ,const float _cena):
 Bazowa(_producent, _model,_cena), predkosc(_predkosc), typ(_typ)
 {}
 
