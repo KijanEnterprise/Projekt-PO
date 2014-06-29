@@ -1,28 +1,16 @@
 #pragma once
+#include "Czlowiek.h"
 #include <stdio.h>
 #include <string>
 #include <iostream>
 #include <iomanip>
 using namespace std;
 
-class Pracownik
+class Pracownik: public Czlowiek
 {
 private:
-	string imie;
-	string nazwisko;
-	string telefon;
-	string ulica;
-	string miasto;
-	string email;
-	int id;
+	int wynagrodzenie;
 public:
-	Pracownik(string _imie, string _nazwisko, string _telefon, string _ulica, string _miasto, string _email, int _id);
-	string Getimie();
-	string Getnazwisko();
-	string Gettelefon();
-	string Getulica();
-	string Getmiasto();
-	string Getemail();
-	int Getid();
+	Pracownik(string _imie, string _nazwisko, string _telefon, string _ulica, string _miasto, string _email, int _id, int _wynagrodzenie);
 	void Wyswietl();
 };

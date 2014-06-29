@@ -118,7 +118,7 @@ void Odczytaj(vector<Procesor> &Procesory,vector<Plyta> &Plyty,vector<Pamiec> &P
  
 void Odczytaj(vector<Klient> &Klienci, vector<Pracownik> &Pracownicy)
 {
-	string dana0,dana1,dana2,dana3,dana4,dana5,dana6,dana7;
+	string dana0,dana1,dana2,dana3,dana4,dana5,dana6,dana7,dana8;
 	int rodzaj;
 	char separator = ';';
 	char konieclini = '\n';
@@ -134,7 +134,8 @@ void Odczytaj(vector<Klient> &Klienci, vector<Pracownik> &Pracownicy)
 		getline(plik,dana4,separator);
 		getline(plik,dana5,separator);
 		getline(plik,dana6,separator);
-		getline(plik,dana7,konieclini);
+		getline(plik,dana7,separator);
+		getline(plik,dana8,konieclini);
 		if(rodzaj==1)
 		{
 			Klient Klient(dana1,dana2,dana3,dana4,dana5,dana6,atoi(dana7.c_str()));
@@ -142,7 +143,7 @@ void Odczytaj(vector<Klient> &Klienci, vector<Pracownik> &Pracownicy)
 		}
 		if(rodzaj==5)
 		{
-			Pracownik Pracownik(dana1,dana2,dana3,dana4,dana5,dana6,atoi(dana7.c_str()));
+			Pracownik Pracownik(dana1,dana2,dana3,dana4,dana5,dana6,atoi(dana7.c_str()),atoi(dana8.c_str()));
 			Pracownicy.push_back(Pracownik);
 		}
 		
@@ -191,7 +192,6 @@ void Wyswietl(vector<Procesor> &Procesory,vector<Plyta> &Plyty,vector<Pamiec> &P
 	cout << endl << "### Lista plyt glownych ####" << endl;
 	cout << "Producent\tModel\tChipset\tSocket\tCena" << endl;
 	for(int i=0;i<Plyty.size();i++) Plyty[i].Wyswietl();
-	
 	cout << endl << "### Lista pamieci ram" << endl;
 	cout << "Producent\tModel\tRozmiar\tTyp\tCena" << endl;
 	for(int i=0;i<Pamieci.size();i++) Pamieci[i].Wyswietl();
@@ -207,7 +207,8 @@ void Wyswietl(vector<Procesor> &Procesory,vector<Plyta> &Plyty,vector<Pamiec> &P
 	cout << endl << "### Lista kart sieciowych ####" << endl;
 	cout << "Producent\tModel\tPredkosc\tTyp\tCena" << endl;
 	for(int i=0;i<Sieciowe.size();i++) Sieciowe[i].Wyswietl();
- 
+ 	
+
 	cout << endl << "### Lista napedow ####" << endl;
 	cout << "Producent\tModel\tRodzaj\tSzybkosc\tCena" << endl;
 	for(int i=0;i<Napedy.size();i++) Napedy[i].Wyswietl();

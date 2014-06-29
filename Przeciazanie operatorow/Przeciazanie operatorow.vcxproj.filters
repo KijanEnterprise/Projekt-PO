@@ -36,9 +36,6 @@
     <ClCompile Include="Siec.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Bazowa.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
     <ClCompile Include="Naped.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -49,6 +46,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Klient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Bazowa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Czlowiek.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -84,6 +87,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Klient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Czlowiek.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

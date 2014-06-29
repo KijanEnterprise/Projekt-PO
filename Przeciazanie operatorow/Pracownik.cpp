@@ -1,43 +1,9 @@
 #include "Pracownik.h"
 
-Pracownik::Pracownik(string _imie, string _nazwisko, string _telefon, string _ulica, string _miasto, string _email, int _id):
-imie(_imie), nazwisko(_nazwisko), telefon (_telefon), ulica(_ulica), miasto(_miasto), email(_email), id(_id)
+
+Pracownik::Pracownik(string _imie, string _nazwisko, string _telefon, string _ulica, string _miasto, string _email, int _id, int _wynagrodzenie):
+Czlowiek(_imie,_nazwisko,_telefon,_ulica,_miasto,_email,_id),wynagrodzenie(_wynagrodzenie)
 {}
-
-string Pracownik::Getimie()
-{
-	return imie;	
-}
-
-string Pracownik::Getnazwisko()
-{
-	return nazwisko;	
-}
-
-string Pracownik::Gettelefon()
-{
-	return telefon;	
-}
-
-string Pracownik::Getulica()
-{
-	return ulica;	
-}
-
-string Pracownik::Getmiasto()
-{
-	return miasto;	
-}
-
-string Pracownik::Getemail()
-{
-	return email;	
-}
-
-int Pracownik::Getid()
-{
-	return id;	
-}
 
 void Pracownik::Wyswietl()
 {

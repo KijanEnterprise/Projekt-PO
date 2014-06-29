@@ -62,6 +62,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bazowa.cpp" />
+    <ClCompile Include="Czlowiek.cpp" />
     <ClCompile Include="Dzwiek.cpp" />
     <ClCompile Include="Grafika.cpp" />
     <ClCompile Include="Klient.cpp" />
@@ -76,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bazowa.h" />
+    <ClInclude Include="Czlowiek.h" />
     <ClInclude Include="Dzwiek.h" />
     <ClInclude Include="Grafika.h" />
     <ClInclude Include="Klient.h" />
