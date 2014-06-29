@@ -1,41 +1,10 @@
-﻿Build started 2014-06-30 00:10:24.
+﻿Build started 2014-06-30 01:01:55.
      1>Project "C:\Users\alexc_000\Documents\Projekt-PO\Przeciazanie operatorow\Przeciazanie operatorow.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\Projekt PO.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
-         main.cpp
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(116): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(117): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(118): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(119): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(120): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(121): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(122): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(123): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(131): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(132): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(143): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(147): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(150): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(154): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(158): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(162): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(166): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(170): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(177): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(184): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(196): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(211): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(226): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(241): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(256): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(271): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(286): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(301): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(316): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(331): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\projekt-po\przeciazanie operatorow\main.cpp(353): warning C4700: uninitialized local variable 'Procesory' used
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Pracownik.cpp
+         Pracownik.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\alexc_000\Documents\Projekt-PO\Debug\Projekt PO.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Projekt PO.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\alexc_000\Documents\Projekt-PO\Debug\Projekt PO.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\alexc_000\Documents\Projekt-PO\Debug\Projekt PO.lib" /MACHINE:X86 Debug\Bazowa.obj
          Debug\Czlowiek.obj
@@ -62,4 +31,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.69
+Time Elapsed 00:00:01.31

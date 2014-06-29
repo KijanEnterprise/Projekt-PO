@@ -11,12 +11,12 @@ void Zasilacz::Wyswietl()
 
 ostream &operator << (ostream &C, Zasilacz &V)
 {
-	return C << V.producent << " ; " << V.model << " ; " << V.moc << " ; " << V.cena<< endl;
+	return C << 8 << " ; " << V.producent << " ; " << V.model << " ; " << V.moc << " ; " << V.cena<< endl;
 }
 
 istream &operator >> (istream &C, Zasilacz &V)
 {
 	string srednik;
-	C >> V.producent >> srednik >> V.model >> srednik >> V.moc >> srednik >> V.cena;
+	C >> srednik >> V.producent >> srednik >> V.model >> srednik >> V.moc >> srednik >> V.cena;
 	return C;
 }

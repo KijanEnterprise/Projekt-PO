@@ -11,12 +11,12 @@ void Naped::Wyswietl()
 
 ostream &operator << (ostream &C, Naped &V)
 {
-	return C << V.producent << " ; " << V.model << " ; " << V.naped << " ; " << V.szybkosc << " ; " << V.cena<< endl;
+	return C << 7 << " ; " << V.producent << " ; " << V.model << " ; " << V.naped << " ; " << V.szybkosc << " ; " << V.cena<< endl;
 }
 
 istream &operator >> (istream &C, Naped &V)
 {
 	string srednik;
-	C >> V.producent >> srednik >> V.model >> srednik >> V.naped >> srednik >> V.szybkosc >> srednik >> V.cena;
+	C >> srednik >> V.producent >> srednik >> V.model >> srednik >> V.naped >> srednik >> V.szybkosc >> srednik >> V.cena;
 	return C;
 }

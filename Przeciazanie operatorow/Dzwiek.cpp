@@ -12,13 +12,13 @@ void Dzwiek::Wyswietl()
 
 ostream &operator << (ostream &C, Dzwiek &V)
 {
-	return C << V.producent << " ; " << V.model << " ; " << V.probkowanie << " ; " << V.czestotliwosc << " ; " << V.rodzaj<< " ; " 
+	return C << 5 << " ; " << V.producent << " ; " << V.model << " ; " << V.probkowanie << " ; " << V.czestotliwosc << " ; " << V.rodzaj<< " ; " 
 		<< V.cena << endl;
 }
 
 istream &operator >> (istream &C, Dzwiek &V)
 {
 	string srednik;
-	C >> V.producent >> srednik >> V.model >> srednik >> V.probkowanie >> srednik >> V.czestotliwosc >> srednik >> V.rodzaj >> srednik >> V.cena;
+	C >> srednik >> V.producent >> srednik >> V.model >> srednik >> V.probkowanie >> srednik >> V.czestotliwosc >> srednik >> V.rodzaj >> srednik >> V.cena;
 	return C;
 }

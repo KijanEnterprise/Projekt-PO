@@ -11,12 +11,12 @@ void Procesor::Wyswietl()
 
 ostream &operator << (ostream &C, Procesor &V)
 {
-	return C << V.producent << " ; " << V.model << " ; " << V.taktowanie << " ; " << V.rdzenie << " ; " << V.cena<< endl;
+	return C << 1 << " ; " << V.producent << " ; " << V.model << " ; " << V.taktowanie << " ; " << V.rdzenie << " ; " << V.cena<< endl;
 }
 
 istream &operator >> (istream &C, Procesor &V)
 {
 	string srednik;
-	C >> V.producent >> srednik >> V.model >> srednik >> V.taktowanie >> srednik >> V.rdzenie >> srednik >> V.cena;
+	C >> srednik >> V.producent >> srednik >> V.model >> srednik >> V.taktowanie >> srednik >> V.rdzenie >> srednik >> V.cena;
 	return C;
 }

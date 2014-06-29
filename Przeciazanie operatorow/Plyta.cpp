@@ -11,12 +11,12 @@ void Plyta::Wyswietl()
 
 ostream &operator << (ostream &C, Plyta &V)
 {
-	return C << V.producent << " ; " << V.model << " ; " << V.chipset << " ; " << V.socket << " ; " << V.cena<< endl;
+	return C << 2 << " ; " << V.producent << " ; " << V.model << " ; " << V.chipset << " ; " << V.socket << " ; " << V.cena<< endl;
 }
 
 istream &operator >> (istream &C, Plyta &V)
 {
 	string srednik;
-	C >> V.producent >> srednik >> V.model >> srednik >> V.chipset >> srednik >> V.socket >> srednik >> V.cena;
+	C >> srednik >> V.producent >> srednik >> V.model >> srednik >> V.chipset >> srednik >> V.socket >> srednik >> V.cena;
 	return C;
 }

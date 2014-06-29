@@ -1,7 +1,7 @@
 #include "Czlowiek.h"
 
-Czlowiek::Czlowiek(const string _imie, const string _nazwisko, const string _telefon, const string _ulica, const string _miasto, const string _email,
-const int _id):imie(_imie),nazwisko(_nazwisko),telefon(_telefon),ulica(_ulica),miasto(_miasto),email(_email),id(_id)
+Czlowiek::Czlowiek(const string _imie, const string _nazwisko, const string _telefon, const string _ulica, const string _miasto, const string _email):
+imie(_imie),nazwisko(_nazwisko),telefon(_telefon),ulica(_ulica),miasto(_miasto),email(_email)
 {}
 
 string Czlowiek::Getimie()
@@ -34,12 +34,8 @@ string Czlowiek::Getemail()
 	return email;	
 }
 
-int Czlowiek::Getid()
-{
-	return id;	
-}
-
 void Czlowiek::Wyswietl()
 {
-
+		cout << setw(5)  << imie << setw(15)  << nazwisko << setw(15)  << telefon << setw(15)  << ulica << setw(15)  
+		<< miasto << setw(25)  << email << setw(15) <<  endl;
 }

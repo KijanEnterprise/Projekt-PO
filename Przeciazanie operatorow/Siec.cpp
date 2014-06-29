@@ -11,12 +11,12 @@ void Siec::Wyswietl()
 
 ostream &operator << (ostream &C, Siec &V)
 {
-	return C << V.producent << " ; " << V.model << " ; " << V.predkosc << " ; " << V.typ << " ; " << V.cena<< endl;
+	return C << 6 << " ; " << V.producent << " ; " << V.model << " ; " << V.predkosc << " ; " << V.typ << " ; " << V.cena<< endl;
 }
 
 istream &operator >> (istream &C, Siec &V)
 {
 	string srednik;
-	C >> V.producent >> srednik >> V.model >> srednik >> V.predkosc >> srednik >> V.typ >> srednik >> V.cena;
+	C >> srednik >> V.producent >> srednik >> V.model >> srednik >> V.predkosc >> srednik >> V.typ >> srednik >> V.cena;
 	return C;
 }

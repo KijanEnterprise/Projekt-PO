@@ -11,12 +11,12 @@ void Grafika::Wyswietl()
 
 ostream &operator << (ostream &C, Grafika &V)
 {
-	return C << V.producent << " ; " << V.model << " ; " << V.pamiec << " ; " << V.zegar << " ; " << V.cena<< endl;
+	return C << 4 << " ; " << V.producent << " ; " << V.model << " ; " << V.pamiec << " ; " << V.zegar << " ; " << V.cena<< endl;
 }
 
 istream &operator >> (istream &C, Grafika &V)
 {
 	string srednik;
-	C >> V.producent >> srednik >> V.model >> srednik >> V.pamiec >> srednik >> V.zegar >> srednik >> V.cena;
+	C >> srednik >> V.producent >> srednik >> V.model >> srednik >> V.pamiec >> srednik >> V.zegar >> srednik >> V.cena;
 	return C;
 }

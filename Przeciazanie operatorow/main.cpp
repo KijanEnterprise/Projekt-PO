@@ -30,7 +30,7 @@ void Odczytaj(vector<Procesor> &Procesory,vector<Plyta> &Plyty,vector<Pamiec> &P
 			{
 				Procesor procesor("","",0,0,0);
 				plik >> procesor;
-				Procesory.push_back(procesor);  //Dodawanie obiektu na koniec vectora
+				Procesory.push_back(procesor);
 			} break;
 		case 2:
 			{
@@ -173,14 +173,14 @@ void Wyswietl(vector<Procesor> &Procesory,vector<Plyta> &Plyty,vector<Pamiec> &P
 void WyswietlPracownikow(vector<Pracownik> Pracownicy)
 {
 	cout << endl << "### Lista pracownikow ####" << endl;
-	cout << setw(5)  << "ID" << setw(15) << "Imie" << setw(15) << "Nazwisko" << setw(15) << "Nr telefonu" << setw(15) << "Ulica" << setw(15) << "Miasto" << setw(25) << "Email" << endl; 
+	cout << setw(5) << "Imie" << setw(15) << "Nazwisko" << setw(15) << "Nr telefonu" << setw(15) << "Ulica" << setw(15) << "Miasto" << setw(25) << "Email" << setw(15) << "wynagrodzenie"  << endl; 
 	for(int i=0;i<Pracownicy.size();i++) Pracownicy[i].Wyswietl();
 }
 
 void WyswietlKlientow(vector<Klient> Klienci)
 {
 	cout << endl << "### Lista klientow ####" << endl;
-	cout << setw(5) << "ID" << setw(15) << "Imie" << setw(15) << "Nazwisko" << setw(15) << "Nr telefonu" << setw(15) << "Ulica" << setw(15) << "Miasto" << setw(25) << "Email" << endl; 
+	cout << setw(5) << "Imie" << setw(15) << "Nazwisko" << setw(15) << "Nr telefonu" << setw(15) << "Ulica" << setw(15) << "Miasto" << setw(25) << "Email" << endl; 
 	for(int i=0;i<Klienci.size();i++) Klienci[i].Wyswietl();
 }
 
@@ -194,7 +194,7 @@ void HTML_pracownicy(vector<Pracownik> Pracownicy)
 	plik<<"<h1>Pracownicy:</h1><table>"<<endl;
 	plik<<"<tr><td>Lp.</td><td>ID</td><td>Imie</td><td>Nazwisko</td><td>Nr telefonu</td><td>Ulica</td><td>Miasto</td><td>Email</td></tr>"<<endl;
 	for(int i=0;i<Pracownicy.size();i++){	
-		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Pracownicy[i].Getid() <<"</td><td>"<< Pracownicy[i].Getimie() <<"</td><td>"<< Pracownicy[i].Getnazwisko() <<"</td><td>"<< Pracownicy[i].Gettelefon() <<"</td><td>"<< Pracownicy[i].Getulica() <<"</td><td>"<< Pracownicy[i].Getmiasto() <<"</td><td>"<< Pracownicy[i].Getemail() <<"</td></tr>"<<endl;
+		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< 2 <<"</td><td>"<< Pracownicy[i].Getimie() <<"</td><td>"<< Pracownicy[i].Getnazwisko() <<"</td><td>"<< Pracownicy[i].Gettelefon() <<"</td><td>"<< Pracownicy[i].Getulica() <<"</td><td>"<< Pracownicy[i].Getmiasto() <<"</td><td>"<< Pracownicy[i].Getemail() <<"</td></tr>"<<endl;
 	}
 	plik<<"</table></body></html>"<<endl;
 	plik.close();
@@ -209,7 +209,7 @@ void HTML_klienci(vector<Klient> Klienci)
 	plik<<"<h1>Klienci:</h1><table>"<<endl;
 	plik<<"<tr><td>Lp.</td><td>ID</td><td>Imie</td><td>Nazwisko</td><td>Nr telefonu</td><td>Ulica</td><td>Miasto</td><td>Email</td></tr>"<<endl;
 	for(int i=0;i<Klienci.size();i++){
-		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Klienci[i].Getid() <<"</td><td>"<< Klienci[i].Getimie() <<"</td><td>"<< Klienci[i].Getnazwisko() <<"</td><td>"<< Klienci[i].Gettelefon() <<"</td><td>"<< Klienci[i].Getulica() <<"</td><td>"<< Klienci[i].Getmiasto() <<"</td><td>"<< Klienci[i].Getemail() <<"</td></tr>"<<endl;
+		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< 1 <<"</td><td>"<< Klienci[i].Getimie() <<"</td><td>"<< Klienci[i].Getnazwisko() <<"</td><td>"<< Klienci[i].Gettelefon() <<"</td><td>"<< Klienci[i].Getulica() <<"</td><td>"<< Klienci[i].Getmiasto() <<"</td><td>"<< Klienci[i].Getemail() <<"</td></tr>"<<endl;
 	}
 	plik<<"</table></body></html>"<<endl;
 	plik.close();
@@ -358,8 +358,8 @@ int main()
 	WyswietlKlientow(Klienci);
 	WyswietlPracownikow(Pracownicy);
 
-//	Zapisz(Procesory,Plyty,Pamieci,Graficzne,Dzwiekowe,Sieciowe,Napedy,Zasilacze);
-//	Zapisz(Klienci,Pracownicy);
+	Zapisz(Procesory,Plyty,Pamieci,Graficzne,Dzwiekowe,Sieciowe,Napedy,Zasilacze);
+	Zapisz(Klienci,Pracownicy);
 
 	//HTML_pracownicy(Pracownicy);
 	//HTML_klienci(Klienci);

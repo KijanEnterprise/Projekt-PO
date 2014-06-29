@@ -11,12 +11,12 @@ void Pamiec::Wyswietl()
 
 ostream &operator << (ostream &C, Pamiec &V)
 {
-	return C << V.producent << " ; " << V.model << " ; " << V.typ << " ; " << V.rozmiar << " ; " << V.cena<< endl;
+	return C << 3 << " ; " << V.producent << " ; " << V.model << " ; " << V.typ << " ; " << V.rozmiar << " ; " << V.cena<< endl;
 }
 
 istream &operator >> (istream &C, Pamiec &V)
 {
 	string srednik;
-	C >> V.producent >> srednik >> V.model >> srednik >> V.model >> srednik >> V.typ>> srednik >> V.rozmiar >> srednik >> V.cena;
+	C >> srednik >> V.producent >> srednik >> V.model >> srednik >> V.model >> srednik >> V.typ>> srednik >> V.rozmiar >> srednik >> V.cena;
 	return C;
 }
