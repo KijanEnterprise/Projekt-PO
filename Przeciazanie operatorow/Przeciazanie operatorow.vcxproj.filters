@@ -45,6 +45,12 @@
     <ClCompile Include="Zasilacz.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Pracownik.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Klient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bazowa.h">
@@ -72,6 +78,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Zasilacz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pracownik.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Klient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

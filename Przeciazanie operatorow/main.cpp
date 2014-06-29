@@ -1,4 +1,7 @@
+#include "Pracownik.h"
 #include "Bazowa.h"
+
+#include "Klient.h"
 #include "Procesor.h"
 #include "Pamiec.h"
 #include "Plyta.h"
@@ -7,73 +10,13 @@
 #include "Siec.h"
 #include "Naped.h"
 #include "Zasilacz.h"
-#include <string>
+
 #include <vector>
 #include <fstream>
 #include <Windows.h>
 #include <stdlib.h>
-#include <iomanip>
 
-// Klasy zwiazane z pracownikami itd.
- 
-class Pracownik
-{
-private:
-	string imie;
-	string nazwisko;
-	string telefon;
-	string ulica;
-	string miasto;
-	string email;
-	int id;
-public:
-	Pracownik(string _imie, string _nazwisko, string _telefon, string _ulica, string _miasto, string _email, int _id):
-	imie(_imie), nazwisko(_nazwisko), telefon (_telefon), ulica(_ulica), miasto(_miasto), email(_email), id(_id)
-	{}
-	string Getimie()
-	{
-		return imie;	
-	};
-	string Getnazwisko()
-	{
-		return nazwisko;	
-	};
-	string Gettelefon()
-	{
-		return telefon;	
-	};
-	string Getulica()
-	{
-		return ulica;	
-	};
-	string Getmiasto()
-	{
-		return miasto;	
-	};
-	string Getemail()
-	{
-		return email;	
-	};
-	int Getid()
-	{
-		return id;	
-	};
-	void Wyswietl();
-};
- 
-class Klient: public Pracownik
-{
-public:
-	Klient(string _imie, string _nazwisko, string _telefon, string _ulica, string _miasto, string _email, int _id):
-	Pracownik(_imie, _nazwisko, _telefon, _ulica, _miasto, _email, _id)
-	{}
-};
- 
-void Pracownik::Wyswietl()
-{
-	cout << setw(5) << Getid() << setw(15)  << Getimie() << setw(15)  << Getnazwisko() << setw(15)  << Gettelefon() << setw(15)  << Getulica() << setw(15)  << Getmiasto() << setw(25)  << Getemail() << endl;
-}
- 
+
 //  ######   ODCZYTYWANIE
 void Odczytaj(vector<Procesor> &Procesory,vector<Plyta> &Plyty,vector<Pamiec> &Pamieci,vector<Grafika> &Graficzne,vector<Dzwiek> &Dzwiekowe,vector<Siec> &Sieciowe,vector<Naped> &Napedy,vector<Zasilacz> &Zasilacze)
 {
@@ -207,6 +150,7 @@ void Odczytaj(vector<Klient> &Klienci, vector<Pracownik> &Pracownicy)
 	plik.close();
 }
  
+
 //  ######   ZAPISYWANIE
 void Zapisz(vector<Procesor> Procesory,vector<Plyta> Plyty,vector<Pamiec> Pamieci,vector<Grafika> Graficzne,vector<Dzwiek> Dzwiekowe,vector<Siec> Sieciowe,vector<Naped> Napedy,vector<Zasilacz> Zasilacze)
 {
@@ -235,6 +179,7 @@ void Zapisz(vector<Klient> Klienci, vector<Pracownik> Pracownicy)
 	plik.close();
 }
  
+
 //  ######   WYSWIETLANIE
 void Wyswietl(vector<Procesor> &Procesory,vector<Plyta> &Plyty,vector<Pamiec> &Pamieci,vector<Grafika> &Graficzne,vector<Dzwiek> &Dzwiekowe,vector<Siec> &Sieciowe,vector<Naped> &Napedy,vector<Zasilacz> &Zasilacze)
 {
@@ -285,7 +230,8 @@ void WyswietlKlientow(vector<Klient> Klienci)
 	cout << setw(5) << "ID" << setw(15) << "Imie" << setw(15) << "Nazwisko" << setw(15) << "Nr telefonu" << setw(15) << "Ulica" << setw(15) << "Miasto" << setw(25) << "Email" << endl; 
 	for(int i=0;i<Klienci.size();i++) Klienci[i].Wyswietl();
 }
- 
+
+
 //  ######  GENEROWANIE HTML
 void HTML_pracownicy(vector<Pracownik> Pracownicy)
 {
@@ -301,6 +247,7 @@ void HTML_pracownicy(vector<Pracownik> Pracownicy)
 	plik.close();
 	system("html\\pracownicy.html");
 }
+
 void HTML_klienci(vector<Klient> Klienci)
 {
 	fstream plik;
@@ -315,6 +262,7 @@ void HTML_klienci(vector<Klient> Klienci)
 	plik.close();
 	system("html\\klienci.html"); 
 }
+
 void HTML_procesory(vector<Procesor> Procesory)
 {
 	fstream plik;
@@ -329,6 +277,7 @@ void HTML_procesory(vector<Procesor> Procesory)
 	plik.close();
 	system("html\\procesory.html");
 }
+
 void HTML_plyty(vector<Plyta> Plyty)
 {
 	fstream plik;
@@ -343,6 +292,7 @@ void HTML_plyty(vector<Plyta> Plyty)
 	plik.close();
 	system("html\\plytyglowne.html");
 }
+
 void HTML_pamieci(vector<Pamiec> Pamieci)
 {
 	fstream plik;
@@ -357,6 +307,7 @@ void HTML_pamieci(vector<Pamiec> Pamieci)
 	plik.close();
 	system("html\\pamieci.html");
 }
+
 void HTML_graficzne(vector<Grafika> Graficzne)
 {
 	fstream plik;
@@ -371,6 +322,7 @@ void HTML_graficzne(vector<Grafika> Graficzne)
 	plik.close();
 	system("html\\graficzne.html");
 }
+
 void HTML_dzwiekowe(vector<Dzwiek> Dzwiekowe)
 {
 	fstream plik;
@@ -385,6 +337,7 @@ void HTML_dzwiekowe(vector<Dzwiek> Dzwiekowe)
 	plik.close();
 	system("html\\dzwiekowe.html");
 }
+
 void HTML_sieciowe(vector<Siec> Sieciowe)
 {
 	fstream plik;
@@ -399,6 +352,7 @@ void HTML_sieciowe(vector<Siec> Sieciowe)
 	plik.close();
 	system("html\\sieciowe.html");
 }
+
 void HTML_napedy(vector<Naped> Napedy)
 {
 	fstream plik;
@@ -413,6 +367,7 @@ void HTML_napedy(vector<Naped> Napedy)
 	plik.close();
 	system("html\\napedy.html");
 }
+
 void HTML_zasilacze(vector<Zasilacz> Zasilacze)
 {
 	fstream plik;
