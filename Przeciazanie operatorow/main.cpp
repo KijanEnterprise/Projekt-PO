@@ -3,6 +3,10 @@
 #include "Pamiec.h"
 #include "Plyta.h"
 #include "Grafika.h"
+#include "Dzwiek.h"
+#include "Siec.h"
+#include "Naped.h"
+#include "Zasilacz.h"
 #include <string>
 #include <vector>
 #include <fstream>
@@ -10,147 +14,6 @@
 #include <stdlib.h>
 #include <iomanip>
 
- 
-
- 
-// Klasy Podzespolow (!)
-
- 
-
- 
-
-
- 
-class Dzwiek: public Bazowa
-{
-private:
-	int probkowanie;
-	int czestotliwosc;
-	float rodzaj; // np. 5.1 7.1 2.1 2.0 itd.
-public:
-	Dzwiek(string _producent, string _model, int _probkowanie, int _czestotliwosc, float rodzaj, float _cena);
-	void Wyswietl();
-	int Getprobkowanie()
-	{
-		return probkowanie;
-	};
-	int Getczestotliwosc()
-	{
-		return czestotliwosc;
-	};
-	float Getrodzaj()
-	{
-		return rodzaj;
-	};
-};
- 
-class Siec: public Bazowa
-{
-private:
-	int predkosc;
-	string typ; // np. RJ-45, Swiat³owód, BNC
-public:
-	Siec(string _producent, string _model, int _predkosc, string _typ, float _cena);
-	void Wyswietl();
-	int Getpredkosc()
-	{
-		return predkosc;
-	};
-	string Gettyp()
-	{
-		return typ;
-	};
-};
- 
-class Naped: public Bazowa
-{
-private:
-	string naped; // np. DVD, CD, Blue-Ray
-	int szybkosc; // szybkoœc zapisu
-public:
-	Naped(string _producent, string _model, string _typ, int _szybkosc, float _cena);
-	void Wyswietl();
-	string Getnaped()
-	{
-		return naped;
-	};
-	int Getszybkosc()
-	{
-		return szybkosc;
-	};
-};
- 
-class Zasilacz: public Bazowa
-{
-private:
-	int moc;
-public:
-	Zasilacz(string _producent, string _model, int _moc, float _cena);
-	void Wyswietl();
-	int Getmoc()
-	{
-		return moc;
-	};
-};
- 
- 
-// Konstruktory (!)
-  
-
- 
-
- 
-
- 
-
- 
-Dzwiek::Dzwiek(string _producent, string _model, int _probkowanie, int _czestotliwosc, float rodzaj, float _cena):
-Bazowa(_producent, _model,_cena), probkowanie(_probkowanie), czestotliwosc(_czestotliwosc), rodzaj(rodzaj)
-{}
- 
-Siec::Siec(string _producent, string _model, int _predkosc, string _typ, float _cena):
-Bazowa(_producent, _model,_cena), predkosc(_predkosc), typ(_typ)
-{}
- 
-Naped::Naped(string _producent, string _model, string _naped, int _szybkosc, float _cena):
-Bazowa(_producent, _model,_cena), naped(_naped), szybkosc(_szybkosc)
-{}
- 
-Zasilacz::Zasilacz(string _producent, string _model, int _moc, float _cena):
-Bazowa(_producent, _model,_cena), moc(_moc)
-{}
- 
-// Funkcje klass (!)
-
- 
-
- 
-
- 
-
- 
-
- 
-void Dzwiek::Wyswietl()
-{
-	cout << Bazowa::Getproducent() << "\t" << Bazowa::Getmodel() << "\t" << probkowanie << "\t" << czestotliwosc << "\t" << rodzaj<< "\t" << Bazowa::Getcena() << " zl" << endl;
-}
- 
-void Siec::Wyswietl()
-{
-	cout << Bazowa::Getproducent() << "\t" << Bazowa::Getmodel() << "\t" << predkosc << "\t" << typ << "\t" << Bazowa::Getcena() << "\t" << endl;
-}
- 
-void Naped::Wyswietl()
-{
-	cout << Bazowa::Getproducent() << "\t" << Bazowa::Getmodel() << "\t" << naped << "\t" << szybkosc << "\t" << Bazowa::Getcena() << " zl" << endl;
-}
- 
-void Zasilacz::Wyswietl()
-{
-	cout << Bazowa::Getproducent() << "\t" << Bazowa::Getmodel() << "\t" << moc << "\t" << Bazowa::Getcena() << " zl" << endl;
-}
- 
 // Klasy zwiazane z pracownikami itd.
  
 class Pracownik

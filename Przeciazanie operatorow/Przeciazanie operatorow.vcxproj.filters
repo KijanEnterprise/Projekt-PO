@@ -18,9 +18,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Bazowa.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Procesor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -31,6 +28,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Grafika.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dzwiek.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Siec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Bazowa.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Naped.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Zasilacz.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -48,6 +60,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Grafika.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dzwiek.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Siec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Naped.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Zasilacz.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

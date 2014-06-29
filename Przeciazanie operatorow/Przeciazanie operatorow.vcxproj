@@ -62,18 +62,26 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bazowa.cpp" />
+    <ClCompile Include="Dzwiek.cpp" />
     <ClCompile Include="Grafika.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Naped.cpp" />
     <ClCompile Include="Pamiec.cpp" />
     <ClCompile Include="Plyta.cpp" />
     <ClCompile Include="Procesor.cpp" />
+    <ClCompile Include="Siec.cpp" />
+    <ClCompile Include="Zasilacz.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bazowa.h" />
+    <ClInclude Include="Dzwiek.h" />
     <ClInclude Include="Grafika.h" />
+    <ClInclude Include="Naped.h" />
     <ClInclude Include="Pamiec.h" />
     <ClInclude Include="Plyta.h" />
     <ClInclude Include="Procesor.h" />
+    <ClInclude Include="Siec.h" />
+    <ClInclude Include="Zasilacz.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
