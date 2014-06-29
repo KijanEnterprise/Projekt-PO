@@ -2,7 +2,7 @@
 #include "Procesor.h"
 #include "Pamiec.h"
 #include "Plyta.h"
-
+#include "Grafika.h"
 #include <string>
 #include <vector>
 #include <fstream>
@@ -19,23 +19,7 @@
 
  
 
-class Grafika: public Bazowa
-{
-private:
-	int pamiec;
-	int zegar;
-public:
-	Grafika(string _producent, string _model, int _pamiec, int _zegar, float _cena);
-	void Wyswietl();
-	int Getpamiec()
-	{
-		return pamiec;
-	};
-	int Getzegar()
-	{
-		return zegar;
-	};
-};
+
  
 class Dzwiek: public Bazowa
 {
@@ -118,9 +102,7 @@ public:
  
 
  
-Grafika::Grafika(string _producent, string _model, int _pamiec, int _zegar, float _cena):
-Bazowa(_producent, _model,_cena), pamiec(_pamiec), zegar(_zegar)
-{}
+
  
 Dzwiek::Dzwiek(string _producent, string _model, int _probkowanie, int _czestotliwosc, float rodzaj, float _cena):
 Bazowa(_producent, _model,_cena), probkowanie(_probkowanie), czestotliwosc(_czestotliwosc), rodzaj(rodzaj)
@@ -147,10 +129,7 @@ Bazowa(_producent, _model,_cena), moc(_moc)
  
 
  
-void Grafika::Wyswietl()
-{
-	cout << Bazowa::Getproducent() << "\t" << Bazowa::Getmodel() << "\t" << pamiec << "\t" << zegar << "\t" << Bazowa::Getcena() << " zl" << endl;
-}
+
  
 void Dzwiek::Wyswietl()
 {

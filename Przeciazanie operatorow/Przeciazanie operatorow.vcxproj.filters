@@ -30,6 +30,9 @@
     <ClCompile Include="Pamiec.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Grafika.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bazowa.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Pamiec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grafika.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
