@@ -6,5 +6,17 @@ Bazowa(_producent, _model,_cena), predkosc(_predkosc), typ(_typ)
 
 void Siec::Wyswietl()
 {
-	cout << Bazowa::Getproducent() << "\t" << Bazowa::Getmodel() << "\t" << predkosc << "\t" << typ << "\t" << Bazowa::Getcena() << "\t" << endl;
+	cout << Bazowa::getProducent() << "\t" << Bazowa::getModel() << "\t" << predkosc << "\t" << typ << "\t" << Bazowa::getCena() << "\t" << endl;
+}
+
+ostream &operator << (ostream &C, Siec &V)
+{
+	return C << V.producent << " ; " << V.model << " ; " << V.predkosc << " ; " << V.typ << " ; " << V.cena<< endl;
+}
+
+istream &operator >> (istream &C, Siec &V)
+{
+	string srednik;
+	C >> V.producent >> srednik >> V.model >> srednik >> V.predkosc >> srednik >> V.typ >> srednik >> V.cena;
+	return C;
 }

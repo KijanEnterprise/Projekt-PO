@@ -6,5 +6,17 @@ Bazowa(_producent, _model,_cena), naped(_naped), szybkosc(_szybkosc)
 
 void Naped::Wyswietl()
 {
-	cout << Bazowa::Getproducent() << "\t" << Bazowa::Getmodel() << "\t" << naped << "\t" << szybkosc << "\t" << Bazowa::Getcena() << " zl" << endl;
+	cout << Bazowa::getProducent() << "\t" << Bazowa::getModel() << "\t" << naped << "\t" << szybkosc << "\t" << Bazowa::getCena() << " zl" << endl;
+}
+
+ostream &operator << (ostream &C, Naped &V)
+{
+	return C << V.producent << " ; " << V.model << " ; " << V.naped << " ; " << V.szybkosc << " ; " << V.cena<< endl;
+}
+
+istream &operator >> (istream &C, Naped &V)
+{
+	string srednik;
+	C >> V.producent >> srednik >> V.model >> srednik >> V.naped >> srednik >> V.szybkosc >> srednik >> V.cena;
+	return C;
 }

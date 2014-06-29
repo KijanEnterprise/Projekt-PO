@@ -9,12 +9,8 @@ private:
 public:
 	Naped(const string _producent,const string _model,const string _typ,const int _szybkosc,const float _cena);
 	void Wyswietl();
-	string Getnaped()
-	{
-		return naped;
-	}
-	int Getszybkosc()
-	{
-		return szybkosc;
-	}
+	string getNaped(){	return naped;}
+	int getSzybkosc(){	return szybkosc;}
+	friend ostream &operator <<(ostream &C, Naped &V);
+	friend istream &operator >>(istream &C, Naped &V);
 };

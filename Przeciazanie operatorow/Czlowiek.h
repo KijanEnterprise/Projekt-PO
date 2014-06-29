@@ -7,7 +7,7 @@ using namespace std;
 
 class Czlowiek
 {
-private:
+protected:
 	string imie;
 	string nazwisko;
 	string telefon;

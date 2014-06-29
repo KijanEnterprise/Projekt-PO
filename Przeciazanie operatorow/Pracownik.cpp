@@ -10,3 +10,17 @@ void Pracownik::Wyswietl()
 {
 	cout << setw(5) << Getid() << setw(15)  << Getimie() << setw(15)  << Getnazwisko() << setw(15)  << Gettelefon() << setw(15)  << Getulica() << setw(15)  << Getmiasto() << setw(25)  << Getemail() << endl;
 }
+
+ostream &operator << (ostream &C, Pracownik &V)
+{
+	return C << V.id << " ; " << V.imie << " ; " << V.nazwisko << " ; " << V.telefon << " ; " << V.email << " ; " << V.ulica << " ; " 
+		<< V.miasto << " ; " << V.wynagrodzenie << endl;
+}
+
+istream &operator >> (istream &C, Pracownik &V)
+{
+	string srednik;
+	C >> V.id >> srednik >> V.imie >> srednik >> V.nazwisko >> srednik >> V.telefon >> srednik >> V.email
+		>> srednik >> V.email >> srednik >> V.ulica >> srednik >> V.miasto >> srednik >> V.wynagrodzenie;
+	return C;
+}

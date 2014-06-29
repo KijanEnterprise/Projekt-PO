@@ -12,4 +12,6 @@ public:
 	{
 		return moc;
 	}
+	friend ostream &operator <<(ostream &C, Zasilacz &V);
+	friend istream &operator >>(istream &C, Zasilacz &V);
 };

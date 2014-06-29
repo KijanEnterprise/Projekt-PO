@@ -9,12 +9,8 @@ private:
 public:
 	Siec(const string _producent,const string _model,const int _predkosc,const string _typ,const float _cena);
 	void Wyswietl();
-	int Getpredkosc()
-	{
-		return predkosc;
-	}
-	string Gettyp()
-	{
-		return typ;
-	}
+	int getPredkosc(){	return predkosc;}
+	string getTyp(){	return typ;}
+	friend ostream &operator << (ostream &C, Siec &V);
+	friend istream &operator >> (istream &C, Siec &V);
 };

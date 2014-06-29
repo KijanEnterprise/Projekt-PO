@@ -6,5 +6,19 @@ Bazowa(_producent, _model,_cena), probkowanie(_probkowanie), czestotliwosc(_czes
 
 void Dzwiek::Wyswietl()
 {
-	cout << Bazowa::Getproducent() << "\t" << Bazowa::Getmodel() << "\t" << probkowanie << "\t" << czestotliwosc << "\t" << rodzaj<< "\t" << Bazowa::Getcena() << " zl" << endl;
+	cout << Bazowa::getProducent() << "\t" << Bazowa::getModel() << "\t" << probkowanie << "\t" << czestotliwosc << "\t" << rodzaj 
+		<< "\t" << Bazowa::getCena() << " zl" << endl;
+}
+
+ostream &operator << (ostream &C, Dzwiek &V)
+{
+	return C << V.producent << " ; " << V.model << " ; " << V.probkowanie << " ; " << V.czestotliwosc << " ; " << V.rodzaj<< " ; " 
+		<< V.cena << endl;
+}
+
+istream &operator >> (istream &C, Dzwiek &V)
+{
+	string srednik;
+	C >> V.producent >> srednik >> V.model >> srednik >> V.probkowanie >> srednik >> V.czestotliwosc >> srednik >> V.rodzaj >> srednik >> V.cena;
+	return C;
 }

@@ -157,14 +157,14 @@ void Zapisz(vector<Procesor> Procesory,vector<Plyta> Plyty,vector<Pamiec> Pamiec
 {
 	fstream plik;
 	plik.open("zapis1.csv",std::ios::out);
-	for(int i=0;i<Procesory.size();i++) plik << "1;" << Procesory[i].Getproducent() << ";" << Procesory[i].Getmodel() << ";" << Procesory[i].Gettaktowanie() << ";" << Procesory[i].Getrdzenie() << ";" << Procesory[i].Getcena() << endl;
-	for(int i=0;i<Plyty.size();i++) plik << "2;" << Plyty[i].Getproducent() << ";" << Plyty[i].Getmodel() << ";" << Plyty[i].Getchipset() << ";" << Plyty[i].Getsocket() << ";" << Plyty[i].Getcena() << endl;
-	for(int i=0;i<Pamieci.size();i++) plik << "3;" << Pamieci[i].Getproducent() << ";" << Pamieci[i].Getmodel() << ";" << Pamieci[i].Gettyp() << ";" << Pamieci[i].Getrozmiar() << ";" << Pamieci[i].Getcena() << endl;
-	for(int i=0;i<Graficzne.size();i++) plik << "4;" << Graficzne[i].Getproducent() << ";" << Graficzne[i].Getmodel() << ";" << Graficzne[i].Getpamiec() << ";" << Graficzne[i].Getzegar() << ";" << Graficzne[i].Getcena() << endl;
-	for(int i=0;i<Dzwiekowe.size();i++) plik << "5;" << Dzwiekowe[i].Getproducent() << ";" << Dzwiekowe[i].Getmodel() << ";" << Dzwiekowe[i].Getprobkowanie() << ";" << Dzwiekowe[i].Getczestotliwosc() << ";" << Dzwiekowe[i].Getrodzaj() << ";" << Dzwiekowe[i].Getcena() << endl;
-	for(int i=0;i<Sieciowe.size();i++) plik << "6;" << Sieciowe[i].Getproducent() << ";" << Sieciowe[i].Getmodel() << ";" << Sieciowe[i].Getpredkosc() << ";" << Sieciowe[i].Gettyp() << ";" << Sieciowe[i].Getcena() << endl;
-	for(int i=0;i<Napedy.size();i++) plik << "7;" << Napedy[i].Getproducent() << ";" << Napedy[i].Getmodel() << ";" << Napedy[i].Getszybkosc() << ";" << Napedy[i].Getcena() << ";" << endl;
-	for(int i=0;i<Zasilacze.size();i++) plik << "8;" << Zasilacze[i].Getproducent() << ";" << Zasilacze[i].Getmodel() << ";" << Zasilacze[i].Getmoc() << ";" << Zasilacze[i].Getcena() << endl;
+	for(int i=0;i<Procesory.size();i++) plik << "1;" << Procesory[i].getProducent() << ";" << Procesory[i].getModel() << ";" << Procesory[i].getTaktowanie() << ";" << Procesory[i].getRdzenie() << ";" << Procesory[i].getCena() << endl;
+	for(int i=0;i<Plyty.size();i++) plik << "2;" << Plyty[i].getProducent() << ";" << Plyty[i].getModel() << ";" << Plyty[i].getChipset() << ";" << Plyty[i].getSocket() << ";" << Plyty[i].getCena() << endl;
+	for(int i=0;i<Pamieci.size();i++) plik << "3;" << Pamieci[i].getProducent() << ";" << Pamieci[i].getModel() << ";" << Pamieci[i].getTyp() << ";" << Pamieci[i].getRozmiar() << ";" << Pamieci[i].getCena() << endl;
+	for(int i=0;i<Graficzne.size();i++) plik << "4;" << Graficzne[i].getProducent() << ";" << Graficzne[i].getModel() << ";" << Graficzne[i].getPamiec() << ";" << Graficzne[i].getZegar() << ";" << Graficzne[i].getCena() << endl;
+	for(int i=0;i<Dzwiekowe.size();i++) plik << "5;" << Dzwiekowe[i].getProducent() << ";" << Dzwiekowe[i].getModel() << ";" << Dzwiekowe[i].Getprobkowanie() << ";" << Dzwiekowe[i].Getczestotliwosc() << ";" << Dzwiekowe[i].Getrodzaj() << ";" << Dzwiekowe[i].getCena() << endl;
+	for(int i=0;i<Sieciowe.size();i++) plik << "6;" << Sieciowe[i].getProducent() << ";" << Sieciowe[i].getModel() << ";" << Sieciowe[i].getPredkosc() << ";" << Sieciowe[i].getTyp() << ";" << Sieciowe[i].getCena() << endl;
+	for(int i=0;i<Napedy.size();i++) plik << "7;" << Napedy[i].getProducent() << ";" << Napedy[i].getModel() << ";" << Napedy[i].getSzybkosc() << ";" << Napedy[i].getCena() << ";" << endl;
+	for(int i=0;i<Zasilacze.size();i++) plik << "8;" << Zasilacze[i].getProducent() << ";" << Zasilacze[i].getModel() << ";" << Zasilacze[i].Getmoc() << ";" << Zasilacze[i].getCena() << endl;
 	cout << "Lista klientow i pracownikow zostala zapisana!" << endl;
 	plik.close();
 }
@@ -272,7 +272,7 @@ void HTML_procesory(vector<Procesor> Procesory)
 	plik<<"<h1>Procesory:</h1><table>"<<endl;
 	plik<<"<tr><td>Lp.</td><td>Producent</td><td>Model</td><td>Taktowanie</td><td>Rdzenie</td><td>Cena</td></tr>"<<endl;
 	for(int i=0;i<Procesory.size();i++){	
-		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Procesory[i].Getproducent() <<"</td><td>"<< Procesory[i].Getmodel() <<"</td><td>"<< Procesory[i].Gettaktowanie() <<"</td><td>"<< Procesory[i].Getrdzenie() <<"</td><td>"<< Procesory[i].Getcena() <<"</td></tr>"<<endl;
+		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Procesory[i].getProducent() <<"</td><td>"<< Procesory[i].getModel() <<"</td><td>"<< Procesory[i].getTaktowanie() <<"</td><td>"<< Procesory[i].getRdzenie() <<"</td><td>"<< Procesory[i].getCena() <<"</td></tr>"<<endl;
 	}
 	plik<<"</table></body></html>"<<endl;
 	plik.close();
@@ -287,7 +287,7 @@ void HTML_plyty(vector<Plyta> Plyty)
 	plik<<"<h1>Plyty glowne:</h1><table>"<<endl;
 	plik<<"<tr><td>Lp.</td><td>Producent</td><td>Model</td><td>Chipset</td><td>Socket</td><td>Cena</td></tr>"<<endl;
 	for(int i=0;i<Plyty.size();i++){	
-		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Plyty[i].Getproducent() <<"</td><td>"<< Plyty[i].Getmodel() <<"</td><td>"<< Plyty[i].Getchipset() <<"</td><td>"<< Plyty[i].Getsocket() <<"</td><td>"<< Plyty[i].Getcena() <<"</td></tr>"<<endl;
+		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Plyty[i].getProducent() <<"</td><td>"<< Plyty[i].getModel() <<"</td><td>"<< Plyty[i].getChipset() <<"</td><td>"<< Plyty[i].getSocket() <<"</td><td>"<< Plyty[i].getCena() <<"</td></tr>"<<endl;
 	}
 	plik<<"</table></body></html>"<<endl;
 	plik.close();
@@ -302,7 +302,7 @@ void HTML_pamieci(vector<Pamiec> Pamieci)
 	plik<<"<h1>Pamiêci:</h1><table>"<<endl;
 	plik<<"<tr><td>Lp.</td><td>Producent</td><td>Model</td><td>Rozmiar</td><td>Typ</td><td>Cena</td></tr>"<<endl;
 	for(int i=0;i<Pamieci.size();i++){	
-		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Pamieci[i].Getproducent() <<"</td><td>"<< Pamieci[i].Getmodel() <<"</td><td>"<< Pamieci[i].Getrozmiar() <<"</td><td>"<< Pamieci[i].Gettyp() <<"</td><td>"<< Pamieci[i].Getcena() <<"</td></tr>"<<endl;
+		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Pamieci[i].getProducent() <<"</td><td>"<< Pamieci[i].getModel() <<"</td><td>"<< Pamieci[i].getRozmiar() <<"</td><td>"<< Pamieci[i].getTyp() <<"</td><td>"<< Pamieci[i].getCena() <<"</td></tr>"<<endl;
 	}
 	plik<<"</table></body></html>"<<endl;
 	plik.close();
@@ -317,7 +317,7 @@ void HTML_graficzne(vector<Grafika> Graficzne)
 	plik<<"<h1>Karty graficzne:</h1><table>"<<endl;
 	plik<<"<tr><td>Lp.</td><td>Producent</td><td>Model</td><td>Zegar</td><td>Typ</td><td>Cena</td></tr>"<<endl;
 	for(int i=0;i<Graficzne.size();i++){	
-		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Graficzne[i].Getproducent() <<"</td><td>"<< Graficzne[i].Getmodel() <<"</td><td>"<< Graficzne[i].Getpamiec() <<"</td><td>"<< Graficzne[i].Getzegar() <<"</td><td>"<< Graficzne[i].Getcena() <<"</td></tr>"<<endl;
+		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Graficzne[i].getProducent() <<"</td><td>"<< Graficzne[i].getModel() <<"</td><td>"<< Graficzne[i].getPamiec() <<"</td><td>"<< Graficzne[i].getZegar() <<"</td><td>"<< Graficzne[i].getCena() <<"</td></tr>"<<endl;
 	}
 	plik<<"</table></body></html>"<<endl;
 	plik.close();
@@ -332,7 +332,7 @@ void HTML_dzwiekowe(vector<Dzwiek> Dzwiekowe)
 	plik<<"<h1>Karty dzwiêkowe:</h1><table>"<<endl;
 	plik<<"<tr><td>Lp.</td><td>Producent</td><td>Model</td><td>Rodzaj</td><td>Probkowanie</td><td>Czestotliwosc</td><td>Cena</td></tr>"<<endl;
 	for(int i=0;i<Dzwiekowe.size();i++){	
-		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Dzwiekowe[i].Getproducent() <<"</td><td>"<< Dzwiekowe[i].Getmodel() <<"</td><td>"<< Dzwiekowe[i].Getrodzaj() <<"</td><td>"<< Dzwiekowe[i].Getprobkowanie() <<"</td><td>"<< Dzwiekowe[i].Getczestotliwosc() <<"</td><td>"<< Dzwiekowe[i].Getcena() <<"</td></tr>"<<endl;
+		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Dzwiekowe[i].getProducent() <<"</td><td>"<< Dzwiekowe[i].getModel() <<"</td><td>"<< Dzwiekowe[i].Getrodzaj() <<"</td><td>"<< Dzwiekowe[i].Getprobkowanie() <<"</td><td>"<< Dzwiekowe[i].Getczestotliwosc() <<"</td><td>"<< Dzwiekowe[i].getCena() <<"</td></tr>"<<endl;
 	}
 	plik<<"</table></body></html>"<<endl;
 	plik.close();
@@ -347,7 +347,7 @@ void HTML_sieciowe(vector<Siec> Sieciowe)
 	plik<<"<h1>Karty sieciowe:</h1><table>"<<endl;
 	plik<<"<tr><td>Lp.</td><td>Producent</td><td>Model</td><td>Typ</td><td>Predkosc</td><td>Cena</td></tr>"<<endl;
 	for(int i=0;i<Sieciowe.size();i++){	
-		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Sieciowe[i].Getproducent() <<"</td><td>"<< Sieciowe[i].Getmodel() <<"</td><td>"<< Sieciowe[i].Gettyp() <<"</td><td>"<< Sieciowe[i].Getpredkosc() <<"</td><td>"<< Sieciowe[i].Getcena() <<"</td></tr>"<<endl;
+		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Sieciowe[i].getProducent() <<"</td><td>"<< Sieciowe[i].getModel() <<"</td><td>"<< Sieciowe[i].getTyp() <<"</td><td>"<< Sieciowe[i].getPredkosc() <<"</td><td>"<< Sieciowe[i].getCena() <<"</td></tr>"<<endl;
 	}
 	plik<<"</table></body></html>"<<endl;
 	plik.close();
@@ -362,7 +362,7 @@ void HTML_napedy(vector<Naped> Napedy)
 	plik<<"<h1>Napêdy:</h1><table>"<<endl;
 	plik<<"<tr><td>Lp.</td><td>Producent</td><td>Model</td><td>Rodzaj</td><td>Predkosc</td><td>Cena</td></tr>"<<endl;
 	for(int i=0;i<Napedy.size();i++){	
-		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Napedy[i].Getproducent() <<"</td><td>"<< Napedy[i].Getmodel() <<"</td><td>"<< Napedy[i].Getnaped() <<"</td><td>"<< Napedy[i].Getszybkosc() <<"</td><td>"<< Napedy[i].Getcena() <<"</td></tr>"<<endl;
+		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Napedy[i].getProducent() <<"</td><td>"<< Napedy[i].getModel() <<"</td><td>"<< Napedy[i].getNaped() <<"</td><td>"<< Napedy[i].getSzybkosc() <<"</td><td>"<< Napedy[i].getCena() <<"</td></tr>"<<endl;
 	}
 	plik<<"</table></body></html>"<<endl;
 	plik.close();
@@ -377,7 +377,7 @@ void HTML_zasilacze(vector<Zasilacz> Zasilacze)
 	plik<<"<h1>Zasilacze:</h1><table>"<<endl;
 	plik<<"<tr><td>Lp.</td><td>Producent</td><td>Model</td><td>Moc</td><td>Cena</td></tr>"<<endl;
 	for(int i=0;i<Zasilacze.size();i++){	
-		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Zasilacze[i].Getproducent() <<"</td><td>"<< Zasilacze[i].Getmodel() <<"</td><td>"<< Zasilacze[i].Getmoc() <<"</td><td>"<< Zasilacze[i].Getcena() <<"</td></tr>"<<endl;
+		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Zasilacze[i].getProducent() <<"</td><td>"<< Zasilacze[i].getModel() <<"</td><td>"<< Zasilacze[i].Getmoc() <<"</td><td>"<< Zasilacze[i].getCena() <<"</td></tr>"<<endl;
 	}
 	plik<<"</table></body></html>"<<endl;
 	plik.close();

@@ -9,13 +9,8 @@ private:
 public:
 	Pamiec(const string _producent,const string _model,const string _typ,const int _rozmiar,const float _cena);
 	void Wyswietl();
-	int Getrozmiar()
-	{
-		return rozmiar;
-	}
-	string Gettyp()
-	{
-		return typ;
-	}
+	int getRozmiar(){	return rozmiar;}
+	string getTyp(){	return typ;}
+	friend ostream &operator << (ostream &C, Pamiec &V);
+	friend istream &operator >> (istream &C, Pamiec &V);
 };
- 
