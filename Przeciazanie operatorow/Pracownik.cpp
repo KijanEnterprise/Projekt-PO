@@ -21,6 +21,6 @@ istream &operator >> (istream &C, Pracownik &V)
 {
 	string srednik;
 	C >> V.id >> srednik >> V.imie >> srednik >> V.nazwisko >> srednik >> V.telefon >> srednik >> V.email
-		>> srednik >> V.email >> srednik >> V.ulica >> srednik >> V.miasto >> srednik >> V.wynagrodzenie;
+		>> srednik >> V.ulica >> srednik >> V.miasto >> srednik >> V.wynagrodzenie;
 	return C;
 }

@@ -6,7 +6,7 @@ Bazowa(_producent, _model,_cena), taktowanie(_taktowanie), rdzenie(_rdzenie)
 
 void Procesor::Wyswietl()
 {
-	cout << Bazowa::getProducent() << "\t" << Bazowa::getModel() << "\t" << taktowanie << "\t" << rdzenie << "\t" << Bazowa::getCena() << " zl" << endl;
+	cout << producent << "\t" << model << "\t" << taktowanie << "\t" << rdzenie << "\t" << cena << " zl" << endl;
 }
 
 ostream &operator << (ostream &C, Procesor &V)

@@ -1,6 +1,5 @@
 #include "Pracownik.h"
 #include "Bazowa.h"
-
 #include "Klient.h"
 #include "Procesor.h"
 #include "Pamiec.h"
@@ -20,166 +19,120 @@
 //  ######   ODCZYTYWANIE
 void Odczytaj(vector<Procesor> &Procesory,vector<Plyta> &Plyty,vector<Pamiec> &Pamieci,vector<Grafika> &Graficzne,vector<Dzwiek> &Dzwiekowe,vector<Siec> &Sieciowe,vector<Naped> &Napedy,vector<Zasilacz> &Zasilacze)
 {
-	string dana0,dana1,dana2,dana3,dana4,dana5,dana6;
 	int rodzaj;
-	char separator = ';';
-	char konieclini = '\n';
-	fstream plik;
-	plik.open("dane.csv");
-	while (!plik.eof())
+	ifstream plik("Podzespoly.csv");
+	
+	while (plik >> rodzaj)
 	{
-		getline(plik,dana0,';');
-		rodzaj=atoi(dana0.c_str());
-		if(rodzaj==1)
-		{
-			getline(plik,dana1,separator);
-			getline(plik,dana2,separator);
-			getline(plik,dana3,separator);
-			getline(plik,dana4,separator);
-			getline(plik,dana5,konieclini);
-			Procesor procesor(dana1,dana2,(float)atof(dana3.c_str()),atoi(dana4.c_str()),atof(dana5.c_str()));
-			Procesory.push_back(procesor);
+		
+		switch (rodzaj){
+		case 1:
+			{
+				Procesor procesor("","",0,0,0);
+				plik >> procesor;
+				Procesory.push_back(procesor);  //Dodawanie obiektu na koniec vectora
+			} break;
+		case 2:
+			{
+				Plyta plyta("","","","",0);
+				plik >> plyta;
+				Plyty.push_back(plyta);
+			} break;
+		case 3:
+			{
+				Pamiec pamiec("","","",0,0);
+				plik >> pamiec;
+				Pamieci.push_back(pamiec);
+			} break;
+		case 4:
+			{
+				Grafika grafika("","",0,0,0);
+				plik >> grafika;
+				Graficzne.push_back(grafika);
+			} break;
+		case 5:
+			{
+				Dzwiek dzwiek("","",0,0,0,0);
+				plik >> dzwiek;
+				Dzwiekowe.push_back(dzwiek);
+			} break;
+		case 6:
+			{
+				Siec siec("","",0,"",0);
+				plik >> siec;
+				Sieciowe.push_back(siec);
+			} break;
+		case 7:
+			{
+				Naped naped("","","",0,0);
+				plik >> naped;
+				Napedy.push_back(naped);
+			} break;
+		case 8:
+			{
+				Zasilacz zasilacz("","",0,0);
+				plik >> zasilacz;
+				Zasilacze.push_back(zasilacz);
+			} break;
 		}
-		if(rodzaj==2)
-		{
-			getline(plik,dana1,separator);
-			getline(plik,dana2,separator);
-			getline(plik,dana3,separator);
-			getline(plik,dana4,separator);
-			getline(plik,dana5,konieclini);
-			Plyta plyta(dana1,dana2,dana3,dana4,atof(dana5.c_str()));
-			Plyty.push_back(plyta);
-		}
-		if(rodzaj==3)
-		{
-			getline(plik,dana1,separator);
-			getline(plik,dana2,separator);
-			getline(plik,dana3,separator);
-			getline(plik,dana4,separator);
-			getline(plik,dana5,konieclini);
-			Pamiec pamiec(dana1,dana2,dana3,atoi(dana4.c_str()),atof(dana5.c_str()));
-			Pamieci.push_back(pamiec);
-		}
-		if(rodzaj==4)
-		{
-			getline(plik,dana1,separator);
-			getline(plik,dana2,separator);
-			getline(plik,dana3,separator);
-			getline(plik,dana4,separator);
-			getline(plik,dana5,konieclini);
-			Grafika grafika(dana1,dana2,atoi(dana3.c_str()),atoi(dana4.c_str()),atof(dana5.c_str()));
-			Graficzne.push_back(grafika);
-		}
-		if(rodzaj==5)
-		{
-			getline(plik,dana1,separator);
-			getline(plik,dana2,separator);
-			getline(plik,dana3,separator);
-			getline(plik,dana4,separator);
-			getline(plik,dana5,separator);
-			getline(plik,dana6,konieclini);
-			Dzwiek dzwiek(dana1,dana2,atoi(dana3.c_str()),atoi(dana4.c_str()),(float)atof(dana5.c_str()),atof(dana6.c_str()));
-			Dzwiekowe.push_back(dzwiek);
-		}
-		if(rodzaj==6)
-		{
-			getline(plik,dana1,separator);
-			getline(plik,dana2,separator);
-			getline(plik,dana3,separator);
-			getline(plik,dana4,separator);
-			getline(plik,dana5,konieclini);
-			Siec siec(dana1,dana2,atoi(dana3.c_str()),dana4,atof(dana5.c_str()));
-			Sieciowe.push_back(siec);
-		}
-		if(rodzaj==7)
-		{
-			getline(plik,dana1,separator);
-			getline(plik,dana2,separator);
-			getline(plik,dana3,separator);
-			getline(plik,dana4,separator);
-			getline(plik,dana5,konieclini);
-			Naped naped(dana1,dana2,dana3,atoi(dana4.c_str()),atof(dana5.c_str()));
-			Napedy.push_back(naped);
-		}
-		if(rodzaj==8)
-		{
-			getline(plik,dana1,separator);
-			getline(plik,dana2,separator);
-			getline(plik,dana3,separator);
-			getline(plik,dana4,separator);
-			getline(plik,dana5,konieclini);
-			Zasilacz zasilacz(dana1,dana2,atoi(dana3.c_str()),atof(dana5.c_str()));
-			Zasilacze.push_back(zasilacz);
-		}
- 
+
 	}	
 	plik.close();
 }
- 
+
 void Odczytaj(vector<Klient> &Klienci, vector<Pracownik> &Pracownicy)
 {
-	string dana0,dana1,dana2,dana3,dana4,dana5,dana6,dana7,dana8;
 	int rodzaj;
-	char separator = ';';
-	char konieclini = '\n';
-	fstream plik;
-	plik.open("dane2.csv");
-	while (!plik.eof())
+	ifstream plik ("Dane osobowe.csv");
+	while (plik>>rodzaj)
 	{
-		getline(plik,dana0,separator);
-		rodzaj=atoi(dana0.c_str());
-		getline(plik,dana1,separator);
-		getline(plik,dana2,separator);
-		getline(plik,dana3,separator);
-		getline(plik,dana4,separator);
-		getline(plik,dana5,separator);
-		getline(plik,dana6,separator);
-		getline(plik,dana7,separator);
-		getline(plik,dana8,konieclini);
-		if(rodzaj==1)
+		switch (rodzaj)
 		{
-			Klient Klient(dana1,dana2,dana3,dana4,dana5,dana6,atoi(dana7.c_str()));
-			Klienci.push_back(Klient);
+		case 1:
+			{
+				Klient klient("","","","","","",5);
+				plik >> klient;
+				Klienci.push_back(klient);
+			} break;
+		case 2:			
+			{
+
+				Pracownik pracownik("","","","","","",0,1200);
+				plik >> pracownik;
+				Pracownicy.push_back(pracownik);
+			} break;
 		}
-		if(rodzaj==5)
-		{
-			Pracownik Pracownik(dana1,dana2,dana3,dana4,dana5,dana6,atoi(dana7.c_str()),atoi(dana8.c_str()));
-			Pracownicy.push_back(Pracownik);
-		}
-		
+
 	}
 	plik.close();
 }
- 
+
 
 //  ######   ZAPISYWANIE
 void Zapisz(vector<Procesor> Procesory,vector<Plyta> Plyty,vector<Pamiec> Pamieci,vector<Grafika> Graficzne,vector<Dzwiek> Dzwiekowe,vector<Siec> Sieciowe,vector<Naped> Napedy,vector<Zasilacz> Zasilacze)
 {
-	fstream plik;
-	plik.open("zapis1.csv",std::ios::out);
-	for(int i=0;i<Procesory.size();i++) plik << "1;" << Procesory[i].getProducent() << ";" << Procesory[i].getModel() << ";" << Procesory[i].getTaktowanie() << ";" << Procesory[i].getRdzenie() << ";" << Procesory[i].getCena() << endl;
-	for(int i=0;i<Plyty.size();i++) plik << "2;" << Plyty[i].getProducent() << ";" << Plyty[i].getModel() << ";" << Plyty[i].getChipset() << ";" << Plyty[i].getSocket() << ";" << Plyty[i].getCena() << endl;
-	for(int i=0;i<Pamieci.size();i++) plik << "3;" << Pamieci[i].getProducent() << ";" << Pamieci[i].getModel() << ";" << Pamieci[i].getTyp() << ";" << Pamieci[i].getRozmiar() << ";" << Pamieci[i].getCena() << endl;
-	for(int i=0;i<Graficzne.size();i++) plik << "4;" << Graficzne[i].getProducent() << ";" << Graficzne[i].getModel() << ";" << Graficzne[i].getPamiec() << ";" << Graficzne[i].getZegar() << ";" << Graficzne[i].getCena() << endl;
-	for(int i=0;i<Dzwiekowe.size();i++) plik << "5;" << Dzwiekowe[i].getProducent() << ";" << Dzwiekowe[i].getModel() << ";" << Dzwiekowe[i].Getprobkowanie() << ";" << Dzwiekowe[i].Getczestotliwosc() << ";" << Dzwiekowe[i].Getrodzaj() << ";" << Dzwiekowe[i].getCena() << endl;
-	for(int i=0;i<Sieciowe.size();i++) plik << "6;" << Sieciowe[i].getProducent() << ";" << Sieciowe[i].getModel() << ";" << Sieciowe[i].getPredkosc() << ";" << Sieciowe[i].getTyp() << ";" << Sieciowe[i].getCena() << endl;
-	for(int i=0;i<Napedy.size();i++) plik << "7;" << Napedy[i].getProducent() << ";" << Napedy[i].getModel() << ";" << Napedy[i].getSzybkosc() << ";" << Napedy[i].getCena() << ";" << endl;
-	for(int i=0;i<Zasilacze.size();i++) plik << "8;" << Zasilacze[i].getProducent() << ";" << Zasilacze[i].getModel() << ";" << Zasilacze[i].Getmoc() << ";" << Zasilacze[i].getCena() << endl;
-	cout << "Lista klientow i pracownikow zostala zapisana!" << endl;
+	ofstream plik("Podzespoly.csv");
+
+	for(int i=0;i<Procesory.size();i++) plik << Procesory[i];
+	for(int i=0;i<Plyty.size();i++) plik << Plyty[i];
+	for(int i=0;i<Pamieci.size();i++) plik << Pamieci[i];
+	for(int i=0;i<Graficzne.size();i++) plik << Graficzne[i];
+	for(int i=0;i<Dzwiekowe.size();i++) plik << Dzwiekowe[i];
+	for(int i=0;i<Sieciowe.size();i++) plik << Sieciowe[i];
+	for(int i=0;i<Napedy.size();i++) plik << Napedy[i];
+	for(int i=0;i<Zasilacze.size();i++) plik << Zasilacze[i];
 	plik.close();
 }
- 
+
 void Zapisz(vector<Klient> Klienci, vector<Pracownik> Pracownicy)
 {
-	fstream plik;
-	plik.open("zapis2.csv",std::ios::out);
-	for(int i=0;i<Pracownicy.size();i++) plik << "5;" << Pracownicy[i].Getimie() << ";" << Pracownicy[i].Getnazwisko() << ";" << Pracownicy[i].Gettelefon() << ";" << Pracownicy[i].Getulica() << ";" << Pracownicy[i].Getmiasto() << ";" << Pracownicy[i].Getemail() << ";" << Pracownicy[i].Getid() << endl;
-	for(int i=0;i<Klienci.size();i++) plik << "1;" << Klienci[i].Getimie() << ";" << Klienci[i].Getnazwisko() << ";" << Klienci[i].Gettelefon() << ";" << Klienci[i].Getulica() << ";" << Klienci[i].Getmiasto() << ";" << Klienci[i].Getemail() << ";" << Klienci[i].Getid() << endl;
- 
-	cout << "Lista sprzetu zostala zapisana!" << endl;
+	ofstream plik("Dane osobowe.csv");
+
+	for(int i=0;i<Pracownicy.size();i++) plik << Pracownicy[i];
+	for(int i=0;i<Klienci.size();i++) plik << Klienci[i];
 	plik.close();
 }
- 
+
 
 //  ######   WYSWIETLANIE
 void Wyswietl(vector<Procesor> &Procesory,vector<Plyta> &Plyty,vector<Pamiec> &Pamieci,vector<Grafika> &Graficzne,vector<Dzwiek> &Dzwiekowe,vector<Siec> &Sieciowe,vector<Naped> &Napedy,vector<Zasilacz> &Zasilacze)
@@ -188,43 +141,42 @@ void Wyswietl(vector<Procesor> &Procesory,vector<Plyta> &Plyty,vector<Pamiec> &P
 	cout << "### Lista procesorow ####" << endl;
 	cout << "Producent\tModel\tTaktowanie\tIlosc rdzeni\tCena" << endl;
 	for(int i=0;i<Procesory.size();i++) Procesory[i].Wyswietl();
-	
+
 	cout << endl << "### Lista plyt glownych ####" << endl;
 	cout << "Producent\tModel\tChipset\tSocket\tCena" << endl;
 	for(int i=0;i<Plyty.size();i++) Plyty[i].Wyswietl();
 	cout << endl << "### Lista pamieci ram" << endl;
 	cout << "Producent\tModel\tRozmiar\tTyp\tCena" << endl;
 	for(int i=0;i<Pamieci.size();i++) Pamieci[i].Wyswietl();
- 
+
 	cout << endl << "### Lista kart graficznych ####" << endl;
 	cout << "Producent\tModel\tPamiec\tZegar\tCena" << endl;
 	for(int i=0;i<Graficzne.size();i++) Graficzne[i].Wyswietl();
- 
+
 	cout << endl << "### Lista kart dzwiekowych ####" << endl;
 	cout << "Producent\tModel\tProbkowanie\tCzestotliowsc\tRodzaj\tCena" << endl;
 	for(int i=0;i<Dzwiekowe.size();i++) Dzwiekowe[i].Wyswietl();
- 
+
 	cout << endl << "### Lista kart sieciowych ####" << endl;
 	cout << "Producent\tModel\tPredkosc\tTyp\tCena" << endl;
 	for(int i=0;i<Sieciowe.size();i++) Sieciowe[i].Wyswietl();
- 	
 
 	cout << endl << "### Lista napedow ####" << endl;
 	cout << "Producent\tModel\tRodzaj\tSzybkosc\tCena" << endl;
 	for(int i=0;i<Napedy.size();i++) Napedy[i].Wyswietl();
- 
+
 	cout << endl << "### Lista zasilaczy ####" << endl;
 	cout << "Producent\tModel\tMoc\tCena" << endl;
 	for(int i=0;i<Zasilacze.size();i++) Zasilacze[i].Wyswietl();
 }
- 
+
 void WyswietlPracownikow(vector<Pracownik> Pracownicy)
 {
 	cout << endl << "### Lista pracownikow ####" << endl;
 	cout << setw(5)  << "ID" << setw(15) << "Imie" << setw(15) << "Nazwisko" << setw(15) << "Nr telefonu" << setw(15) << "Ulica" << setw(15) << "Miasto" << setw(25) << "Email" << endl; 
 	for(int i=0;i<Pracownicy.size();i++) Pracownicy[i].Wyswietl();
 }
- 
+
 void WyswietlKlientow(vector<Klient> Klienci)
 {
 	cout << endl << "### Lista klientow ####" << endl;
@@ -383,11 +335,11 @@ void HTML_zasilacze(vector<Zasilacz> Zasilacze)
 	plik.close();
 	system("html\\zasilacze.html");
 }
- 
+
 // FUNKCJA MAIN (!)
 int main()
 {
-/*	vector<Procesor> Procesory;
+	vector<Procesor> Procesory;
 	vector<Plyta> Plyty;
 	vector<Pamiec> Pamieci;
 	vector<Grafika> Graficzne;
@@ -395,21 +347,20 @@ int main()
 	vector<Siec> Sieciowe;
 	vector<Naped> Napedy;
 	vector<Zasilacz> Zasilacze;
- 
+
 	vector<Pracownik> Pracownicy;
 	vector<Klient> Klienci;
-	
 	Odczytaj(Procesory,Plyty,Pamieci,Graficzne,Dzwiekowe,Sieciowe,Napedy,Zasilacze);
 	Odczytaj(Klienci,Pracownicy);
- 
+
 	Wyswietl(Procesory,Plyty,Pamieci,Graficzne,Dzwiekowe,Sieciowe,Napedy,Zasilacze);
-	
+
 	WyswietlKlientow(Klienci);
 	WyswietlPracownikow(Pracownicy);
- 
-	Zapisz(Procesory,Plyty,Pamieci,Graficzne,Dzwiekowe,Sieciowe,Napedy,Zasilacze);
-	Zapisz(Klienci,Pracownicy);
- 
+
+//	Zapisz(Procesory,Plyty,Pamieci,Graficzne,Dzwiekowe,Sieciowe,Napedy,Zasilacze);
+//	Zapisz(Klienci,Pracownicy);
+
 	//HTML_pracownicy(Pracownicy);
 	//HTML_klienci(Klienci);
 	//HTML_procesory(Procesory);
@@ -420,7 +371,7 @@ int main()
 	//HTML_sieciowe(Sieciowe);
 	//HTML_napedy(Napedy);
 	//HTML_zasilacze(Zasilacze);
- 
+
 	cin.get();
-	return 0;*/
+	return 0;
 }

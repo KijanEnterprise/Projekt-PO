@@ -7,7 +7,7 @@ private:
 	string naped; // np. DVD, CD, Blue-Ray
 	int szybkosc; // szybkoœc zapisu
 public:
-	Naped(const string _producent,const string _model,const string _typ,const int _szybkosc,const float _cena);
+	Naped(const string _producent,const string _model,const string _naped,const int _szybkosc,const float _cena);
 	void Wyswietl();
 	string getNaped(){	return naped;}
 	int getSzybkosc(){	return szybkosc;}
