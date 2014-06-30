@@ -73,6 +73,7 @@
     <ClCompile Include="Plyta.cpp" />
     <ClCompile Include="Pracownik.cpp" />
     <ClCompile Include="Procesor.cpp" />
+    <ClCompile Include="Przyjecie.cpp" />
     <ClCompile Include="Siec.cpp" />
     <ClCompile Include="Zasilacz.cpp" />
   </ItemGroup>
@@ -88,6 +89,7 @@
     <ClInclude Include="Plyta.h" />
     <ClInclude Include="Pracownik.h" />
     <ClInclude Include="Procesor.h" />
+    <ClInclude Include="Przyjecie.h" />
     <ClInclude Include="Siec.h" />
     <ClInclude Include="Zasilacz.h" />
   </ItemGroup>

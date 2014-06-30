@@ -1,5 +1,6 @@
 #include "Pracownik.h"
 #include "Bazowa.h"
+#include "Przyjecie.h"
 #include "Klient.h"
 #include "Procesor.h"
 #include "Pamiec.h"
@@ -14,6 +15,7 @@
 #include <fstream>
 #include <Windows.h>
 #include <stdlib.h>
+#include <conio.h>
 
 
 //  ######   ODCZYTYWANIE
@@ -339,6 +341,7 @@ void HTML_zasilacze(vector<Zasilacz> Zasilacze)
 // FUNKCJA MAIN (!)
 int main()
 {
+	vector<Przyjecie> Przyjecia;
 	vector<Procesor> Procesory;
 	vector<Plyta> Plyty;
 	vector<Pamiec> Pamieci;
@@ -350,10 +353,207 @@ int main()
 
 	vector<Pracownik> Pracownicy;
 	vector<Klient> Klienci;
+	
 	Odczytaj(Procesory,Plyty,Pamieci,Graficzne,Dzwiekowe,Sieciowe,Napedy,Zasilacze);
 	Odczytaj(Klienci,Pracownicy);
 
-	Wyswietl(Procesory,Plyty,Pamieci,Graficzne,Dzwiekowe,Sieciowe,Napedy,Zasilacze);
+	Przyjecia[0].dodajPrzyjecie(Klienci,Pracownicy);
+
+
+	for(;;)
+        {
+                system("cls");
+                cout << "### MENU v0.00001 ###" << endl;
+                cout << "1. Pracownicy" << endl;
+                cout << "2. Klienci" << endl;
+                cout << "3. Sprzet" << endl;
+                cout << "4. Zlecenie" << endl;
+                cout << "5. Wydanie" << endl;
+                cout << "6. Pomoc" << endl;
+                cout << "0. Wyjscie" << endl;          
+                switch(_getch())
+                {
+                        case '1':  //PRACOWNICY
+                                system("cls");
+                                cout << "### Pracownicy ###" << endl;
+                                cout << "1. Wyswietl" << endl;
+                                cout << "2. Zapisz" << endl;
+                                cout << "3. Generuj HTML" << endl;
+                                cout << "0 - Powrot" << endl;
+                                switch(_getch())
+                                {
+                                        case '1':
+                                        WyswietlPracownikow(Pracownicy);
+                                        _getch();
+                                        break;
+                                        case '2':
+                                        Zapisz(Klienci,Pracownicy);
+                                        break;
+                                        case '3':
+                                    //HTML_klienci(Klienci);   
+                                        break;
+                                        default:
+                                        cout << "Wybrales nieprawidlawa opcje" << endl;
+                                        Sleep(300);
+                                        break;
+                                }      
+                        break;
+                        case '2':  //KLIENCI
+                                system("cls");
+                                cout << "### Klienci ###" << endl;
+                                cout << "1. Wyswietl" << endl;
+                                cout << "2. Zapisz" << endl;
+                                cout << "3. Generuj HTML" << endl;
+                                cout << "0 - Powrot" << endl;
+                                switch(_getch())
+                                {
+                                        case '1':
+                                        WyswietlKlientow(Klienci);     
+                                        _getch();
+                                        break;
+                                        case '2':
+                                        Zapisz(Klienci,Pracownicy);
+                                        break;
+                                        case '3':
+                                    //HTML_klienci(Klienci);   
+                                        break;
+                                        default:
+                                        cout << "Wybrales nieprawidlawa opcje" << endl;
+                                        Sleep(300);
+                                        break;
+                                }                                      
+                        break;
+                        case '3': //SPRZET
+                                system("cls");
+                                cout << "### Sprzet ###" << endl;
+                                cout << "1. Wyswietl" << endl;
+                                cout << "2. Zapisz" << endl;
+                                cout << "3. Generuj HTML" << endl;
+                                cout << "0 - Powrot" << endl;
+                                switch(_getch())
+                                {
+                                        case '1':
+                                        Wyswietl(Procesory,Plyty,Pamieci,Graficzne,Dzwiekowe,Sieciowe,Napedy,Zasilacze);
+                                        _getch();
+                                        break;
+                                        case '2':
+                                        Zapisz(Procesory,Plyty,Pamieci,Graficzne,Dzwiekowe,Sieciowe,Napedy,Zasilacze);
+                                        break;
+                                        case '3':
+                                    //HTML_procesory(Procesory);
+                                    //HTML_plyty(Plyty);
+                                    //HTML_pamieci(Pamieci);
+                                    //HTML_graficzne(Graficzne);
+                                    //HTML_dzwiekowe(Dzwiekowe);
+                                    //HTML_sieciowe(Sieciowe);
+                                    //HTML_napedy(Napedy);
+                                    //HTML_zasilacze(Zasilacze);
+                                        break;
+                                        default:
+                                        cout << "Wybrales nieprawidlawa opcje" << endl;
+                                        Sleep(300);
+                                        break;
+                                }      
+                        break;
+                        case '4':  //ZLECENIE
+                                system("cls");
+                                cout << "### Zlecenie ###" << endl;
+                                cout << "1. Wyswietl" << endl;
+                                cout << "2. Zapisz" << endl;
+                                cout << "3. Generuj HTML" << endl;
+                                cout << "0 - Powrot" << endl;
+                                switch(_getch())
+                                {
+                                        case '1':
+                                        //WyswietlPracownikow(Pracownicy);     
+                                        _getch();
+                                        break;
+                                        case '2':
+                                        //Zapisz(Klienci,Pracownicy);
+                                        break;
+                                        case '3':
+                                    //HTML_klienci(Klienci);   
+                                        break;
+                                        default:
+                                        cout << "Wybrales nieprawidlawa opcje" << endl;
+                                        Sleep(300);
+                                        break;
+                                }      
+                        break;
+                        case '5':   //WYDANIE
+                                system("cls");
+                                cout << "### Wydanie ###" << endl;
+                                cout << "1. Wyswietl" << endl;
+                                cout << "2. Zapisz" << endl;
+                                cout << "3. Generuj HTML" << endl;
+                                cout << "0 - Powrot" << endl;
+                                switch(_getch())
+                                {
+                                        case '1':
+                                        WyswietlPracownikow(Pracownicy);       
+                                        break;
+                                        case '2':
+                                        Zapisz(Klienci,Pracownicy);
+                                        break;
+                                        case '3':
+                                    //HTML_klienci(Klienci);   
+                                        break;
+                                        default:
+                                        cout << "Wybrales nieprawidlawa opcje" << endl;
+                                        Sleep(300);
+                                        break;
+                                }      
+                        break;
+                        case '6':  //POMOC
+                                system("cls");
+                                cout << "### Pomoc ###" << endl;
+                                cout << "1. Autorzy" << endl;
+                                cout << "2. Zapisz" << endl;
+                                cout << "3. Generuj HTML" << endl;
+                                cout << "0 - Powrot" << endl;
+                                switch(_getch())
+                                {
+                                        case '1': //AUTORZY
+                                                system("cls");
+                                                cout << "Autorzy:" << endl;            
+                                                cout << "Aleksander Chytkiewicz" << endl;
+                                                cout << "Lukasz Kijanka" << endl;
+                                                cout << "Dariusz Kwartnik" << endl;
+                                                cout << "Lukasz Zaroda" << endl;
+                                                _getch();
+                                        break;
+                                        case '2':
+                                       
+                                        break;
+                                        case '3':
+                                       
+                                        break;
+                                        default:
+                                        cout << "Wybrales nieprawidlawa opcje" << endl;
+                                        Sleep(300);
+                                        break;
+                                }      
+                        break;
+                        case '0':  // EXIT
+                                system("cls");
+                                cout << "Dziekujemy za skorzystanie z naszego programu ;)" << endl;
+                                Sleep(500);
+                                cout << ".";
+                                Sleep(700);
+                                cout << ".";
+                                Sleep(700);
+                                cout << ".";
+                                Sleep(700);
+                                exit(0);
+                        break;
+                        default:
+                                cout << "Wybrales nieprawidlawa opcje" << endl;
+                                Sleep(300);
+                        break;
+                }
+        }
+	
+/*	Wyswietl(Procesory,Plyty,Pamieci,Graficzne,Dzwiekowe,Sieciowe,Napedy,Zasilacze);
 
 	WyswietlKlientow(Klienci);
 	WyswietlPracownikow(Pracownicy);
@@ -361,17 +561,17 @@ int main()
 	Zapisz(Procesory,Plyty,Pamieci,Graficzne,Dzwiekowe,Sieciowe,Napedy,Zasilacze);
 	Zapisz(Klienci,Pracownicy);
 
-	//HTML_pracownicy(Pracownicy);
-	//HTML_klienci(Klienci);
-	//HTML_procesory(Procesory);
-	//HTML_plyty(Plyty);
-	//HTML_pamieci(Pamieci);
-	//HTML_graficzne(Graficzne);
-	//HTML_dzwiekowe(Dzwiekowe);
-	//HTML_sieciowe(Sieciowe);
-	//HTML_napedy(Napedy);
-	//HTML_zasilacze(Zasilacze);
-
+	HTML_pracownicy(Pracownicy);
+	HTML_klienci(Klienci);
+	HTML_procesory(Procesory);
+	HTML_plyty(Plyty);
+	HTML_pamieci(Pamieci);
+	HTML_graficzne(Graficzne);
+	HTML_dzwiekowe(Dzwiekowe);
+	HTML_sieciowe(Sieciowe);
+	HTML_napedy(Napedy);
+	HTML_zasilacze(Zasilacze);
+*/
 	cin.get();
 	return 0;
 }

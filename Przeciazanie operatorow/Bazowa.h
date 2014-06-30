@@ -15,6 +15,7 @@ public:
 	string getProducent()const{	return producent;}
 	string getModel()const{	return model;} 
 	float getCena()const{	return cena;}
+	virtual void Wyswietl();
 /*	void setProducent(const string _producent){		producent=_producent;}
 	void setModel(const string _model){		model=_model;}
 	void setCena(const int _cena){	cena=_cena;}*/
