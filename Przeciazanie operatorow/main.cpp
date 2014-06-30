@@ -428,7 +428,7 @@ int main()
 	for(;;)
         {
                 system("cls");
-                cout << "### MENU v0.00001 ###" << endl;
+                cout << "### MENU ###" << endl;
                 cout << "1. Pracownicy" << endl;
                 cout << "2. Klienci" << endl;
                 cout << "3. Sprzet" << endl;
@@ -600,6 +600,7 @@ int main()
                                 }      
                         break;
                         case '0':  // EXIT
+								Zapisz(Klienci,Pracownicy);
                                 system("cls");
                                 cout << "Dziekujemy za skorzystanie z naszego programu ;)" << endl;
                                 Sleep(500);
