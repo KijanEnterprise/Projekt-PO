@@ -17,10 +17,10 @@ protected:
 public:
 	Czlowiek(const string _imie, const string _nazwisko, const string _telefon, const string _ulica, const string _miasto, const string _email);
 	virtual void Wyswietl();
-	string Getimie();
-	string Getnazwisko();
-	string Gettelefon();
-	string Getulica();
-	string Getmiasto();
-	string Getemail();
+	string getImie();
+	string getNazwisko();
+	string getTelefon();
+	string getUlica();
+	string getMiasto();
+	string getEmail();
 };

@@ -134,7 +134,7 @@ void Zapisz(vector<Klient> Klienci, vector<Pracownik> Pracownicy)
 }
 
 
-//  ######   WYSWIETLANIE
+//  ######   WYSWIETLANIE ----- DO ZMODYFIKOWANIE (?)
 void Wyswietl(vector<Procesor> &Procesory,vector<Plyta> &Plyty,vector<Pamiec> &Pamieci,vector<Grafika> &Graficzne,vector<Dzwiek> &Dzwiekowe,vector<Siec> &Sieciowe,vector<Naped> &Napedy,vector<Zasilacz> &Zasilacze)
 {
 	cout << endl << "########### DANE SPRZETOWE ##########" << endl;
@@ -194,7 +194,7 @@ void HTML_pracownicy(vector<Pracownik> Pracownicy)
 	plik<<"<h1>Pracownicy:</h1><table>"<<endl;
 	plik<<"<tr><td>Lp.</td><td>ID</td><td>Imie</td><td>Nazwisko</td><td>Nr telefonu</td><td>Ulica</td><td>Miasto</td><td>Email</td></tr>"<<endl;
 	for(int i=0;i<Pracownicy.size();i++){	
-		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< 2 <<"</td><td>"<< Pracownicy[i].Getimie() <<"</td><td>"<< Pracownicy[i].Getnazwisko() <<"</td><td>"<< Pracownicy[i].Gettelefon() <<"</td><td>"<< Pracownicy[i].Getulica() <<"</td><td>"<< Pracownicy[i].Getmiasto() <<"</td><td>"<< Pracownicy[i].Getemail() <<"</td></tr>"<<endl;
+		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< 2 <<"</td><td>"<< Pracownicy[i].getImie() <<"</td><td>"<< Pracownicy[i].getNazwisko() <<"</td><td>"<< Pracownicy[i].getTelefon() <<"</td><td>"<< Pracownicy[i].getUlica() <<"</td><td>"<< Pracownicy[i].getMiasto() <<"</td><td>"<< Pracownicy[i].getEmail() <<"</td></tr>"<<endl;
 	}
 	plik<<"</table></body></html>"<<endl;
 	plik.close();
@@ -209,7 +209,7 @@ void HTML_klienci(vector<Klient> Klienci)
 	plik<<"<h1>Klienci:</h1><table>"<<endl;
 	plik<<"<tr><td>Lp.</td><td>ID</td><td>Imie</td><td>Nazwisko</td><td>Nr telefonu</td><td>Ulica</td><td>Miasto</td><td>Email</td></tr>"<<endl;
 	for(int i=0;i<Klienci.size();i++){
-		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< 1 <<"</td><td>"<< Klienci[i].Getimie() <<"</td><td>"<< Klienci[i].Getnazwisko() <<"</td><td>"<< Klienci[i].Gettelefon() <<"</td><td>"<< Klienci[i].Getulica() <<"</td><td>"<< Klienci[i].Getmiasto() <<"</td><td>"<< Klienci[i].Getemail() <<"</td></tr>"<<endl;
+		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< 1 <<"</td><td>"<< Klienci[i].getImie() <<"</td><td>"<< Klienci[i].getNazwisko() <<"</td><td>"<< Klienci[i].getTelefon() <<"</td><td>"<< Klienci[i].getUlica() <<"</td><td>"<< Klienci[i].getMiasto() <<"</td><td>"<< Klienci[i].getEmail() <<"</td></tr>"<<endl;
 	}
 	plik<<"</table></body></html>"<<endl;
 	plik.close();
@@ -284,7 +284,7 @@ void HTML_dzwiekowe(vector<Dzwiek> Dzwiekowe)
 	plik<<"<h1>Karty dzwiêkowe:</h1><table>"<<endl;
 	plik<<"<tr><td>Lp.</td><td>Producent</td><td>Model</td><td>Rodzaj</td><td>Probkowanie</td><td>Czestotliwosc</td><td>Cena</td></tr>"<<endl;
 	for(int i=0;i<Dzwiekowe.size();i++){	
-		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Dzwiekowe[i].getProducent() <<"</td><td>"<< Dzwiekowe[i].getModel() <<"</td><td>"<< Dzwiekowe[i].Getrodzaj() <<"</td><td>"<< Dzwiekowe[i].Getprobkowanie() <<"</td><td>"<< Dzwiekowe[i].Getczestotliwosc() <<"</td><td>"<< Dzwiekowe[i].getCena() <<"</td></tr>"<<endl;
+		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Dzwiekowe[i].getProducent() <<"</td><td>"<< Dzwiekowe[i].getModel() <<"</td><td>"<< Dzwiekowe[i].getRodzaj() <<"</td><td>"<< Dzwiekowe[i].getProbkowanie() <<"</td><td>"<< Dzwiekowe[i].getCzestotliwosc() <<"</td><td>"<< Dzwiekowe[i].getCena() <<"</td></tr>"<<endl;
 	}
 	plik<<"</table></body></html>"<<endl;
 	plik.close();
@@ -329,7 +329,7 @@ void HTML_zasilacze(vector<Zasilacz> Zasilacze)
 	plik<<"<h1>Zasilacze:</h1><table>"<<endl;
 	plik<<"<tr><td>Lp.</td><td>Producent</td><td>Model</td><td>Moc</td><td>Cena</td></tr>"<<endl;
 	for(int i=0;i<Zasilacze.size();i++){	
-		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Zasilacze[i].getProducent() <<"</td><td>"<< Zasilacze[i].getModel() <<"</td><td>"<< Zasilacze[i].Getmoc() <<"</td><td>"<< Zasilacze[i].getCena() <<"</td></tr>"<<endl;
+		plik<<"<tr><td>"<< i+1 <<"</td><td>"<< Zasilacze[i].getProducent() <<"</td><td>"<< Zasilacze[i].getModel() <<"</td><td>"<< Zasilacze[i].getMoc() <<"</td><td>"<< Zasilacze[i].getCena() <<"</td></tr>"<<endl;
 	}
 	plik<<"</table></body></html>"<<endl;
 	plik.close();

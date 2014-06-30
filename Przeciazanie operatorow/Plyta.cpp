@@ -6,7 +6,7 @@ Bazowa(_producent, _model,_cena), chipset(_chipset), socket(_socket)
 
 void Plyta::Wyswietl()
 {
-	cout << Bazowa::getProducent() << "\t" << Bazowa::getModel() << "\t" << chipset << "\t" << socket << "\t" << Bazowa::getCena() << " zl" << endl;
+	cout << producent << "\t" << model << "\t" << chipset << "\t" << socket << "\t" << cena << " zl" << endl;
 }
 
 ostream &operator << (ostream &C, Plyta &V)

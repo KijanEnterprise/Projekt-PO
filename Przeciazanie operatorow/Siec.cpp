@@ -6,7 +6,7 @@ Bazowa(_producent, _model,_cena), predkosc(_predkosc), typ(_typ)
 
 void Siec::Wyswietl()
 {
-	cout << Bazowa::getProducent() << "\t" << Bazowa::getModel() << "\t" << predkosc << "\t" << typ << "\t" << Bazowa::getCena() << "\t" << endl;
+	cout << producent << "\t" << model << "\t" << predkosc << "\t" << typ << "\t" << cena << "\t" << endl;
 }
 
 ostream &operator << (ostream &C, Siec &V)

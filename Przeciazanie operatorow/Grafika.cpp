@@ -6,7 +6,7 @@ Bazowa(_producent, _model,_cena), pamiec(_pamiec), zegar(_zegar)
 
 void Grafika::Wyswietl()
 {
-	cout << Bazowa::getProducent() << "\t" << Bazowa::getModel() << "\t" << pamiec << "\t" << zegar << "\t" << Bazowa::getCena() << " zl" << endl;
+	cout << producent << "\t" <<model << "\t" << pamiec << "\t" << zegar << "\t" << cena << " zl" << endl;
 }
 
 ostream &operator << (ostream &C, Grafika &V)

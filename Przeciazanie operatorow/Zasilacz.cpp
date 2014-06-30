@@ -6,7 +6,7 @@ Bazowa(_producent, _model,_cena), moc(_moc)
 
 void Zasilacz::Wyswietl()
 {
-	cout << Bazowa::getProducent() << "\t" << Bazowa::getModel() << "\t" << moc << "\t" << Bazowa::getCena() << " zl" << endl;
+	cout << producent << "\t" << model << "\t" << moc << "\t" << cena << " zl" << endl;
 }
 
 ostream &operator << (ostream &C, Zasilacz &V)

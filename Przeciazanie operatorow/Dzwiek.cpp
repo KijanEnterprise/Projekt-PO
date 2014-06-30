@@ -6,8 +6,7 @@ Bazowa(_producent, _model,_cena), probkowanie(_probkowanie), czestotliwosc(_czes
 
 void Dzwiek::Wyswietl()
 {
-	cout << Bazowa::getProducent() << "\t" << Bazowa::getModel() << "\t" << probkowanie << "\t" << czestotliwosc << "\t" << rodzaj 
-		<< "\t" << Bazowa::getCena() << " zl" << endl;
+	cout << producent << "\t" << model << "\t" << probkowanie << "\t" << czestotliwosc << "\t" << rodzaj << "\t" << cena << " zl" << endl;
 }
 
 ostream &operator << (ostream &C, Dzwiek &V)
@@ -19,6 +18,7 @@ ostream &operator << (ostream &C, Dzwiek &V)
 istream &operator >> (istream &C, Dzwiek &V)
 {
 	string srednik;
-	C >> srednik >> V.producent >> srednik >> V.model >> srednik >> V.probkowanie >> srednik >> V.czestotliwosc >> srednik >> V.rodzaj >> srednik >> V.cena;
+	C >> srednik >> V.producent >> srednik >> V.model >> srednik >> V.probkowanie >> srednik >> V.czestotliwosc >> srednik >> V.rodzaj 
+		>> srednik >> V.cena;
 	return C;
 }

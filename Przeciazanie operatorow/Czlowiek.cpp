@@ -4,32 +4,32 @@ Czlowiek::Czlowiek(const string _imie, const string _nazwisko, const string _tel
 imie(_imie),nazwisko(_nazwisko),telefon(_telefon),ulica(_ulica),miasto(_miasto),email(_email)
 {}
 
-string Czlowiek::Getimie()
+string Czlowiek::getImie()
 {
 	return Czlowiek::imie;	
 }
 
-string Czlowiek::Getnazwisko()
+string Czlowiek::getNazwisko()
 {
 	return nazwisko;	
 }
 
-string Czlowiek::Gettelefon()
+string Czlowiek::getTelefon()
 {
 	return telefon;	
 }
 
-string Czlowiek::Getulica()
+string Czlowiek::getUlica()
 {
 	return ulica;	
 }
 
-string Czlowiek::Getmiasto()
+string Czlowiek::getMiasto()
 {
 	return miasto;	
 }
 
-string Czlowiek::Getemail()
+string Czlowiek::getEmail()
 {
 	return email;	
 }

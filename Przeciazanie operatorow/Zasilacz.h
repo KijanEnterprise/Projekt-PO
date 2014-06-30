@@ -8,7 +8,7 @@ private:
 public:
 	Zasilacz(const string _producent,const string _model,const int _moc,const float _cena);
 	void Wyswietl();
-	int Getmoc()
+	int getMoc()
 	{
 		return moc;
 	}
