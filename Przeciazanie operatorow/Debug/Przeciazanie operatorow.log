@@ -1,4 +1,4 @@
-﻿Build started 2014-06-30 22:56:27.
+﻿Build started 2014-06-30 23:45:57.
      1>Project "C:\Users\alexc_000\Documents\Projekt-PO\Przeciazanie operatorow\Przeciazanie operatorow.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\Projekt PO.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -68,4 +68,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.57
+Time Elapsed 00:00:03.15

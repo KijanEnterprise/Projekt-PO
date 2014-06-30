@@ -455,7 +455,7 @@ int main()
                                         Zapisz(Klienci,Pracownicy);
                                         break;
                                         case '3':
-                                    //HTML_klienci(Klienci);   
+                                    HTML_pracownicy(Pracownicy);   
                                         break;
                                         default:
                                         cout << "Wybrales nieprawidlawa opcje" << endl;
@@ -480,7 +480,7 @@ int main()
                                         Zapisz(Klienci,Pracownicy);
                                         break;
                                         case '3':
-                                    //HTML_klienci(Klienci);   
+                                    HTML_klienci(Klienci);   
                                         break;
                                         default:
                                         cout << "Wybrales nieprawidlawa opcje" << endl;
@@ -505,14 +505,14 @@ int main()
                                         Zapisz(Procesory,Plyty,Pamieci,Graficzne,Dzwiekowe,Sieciowe,Napedy,Zasilacze);
                                         break;
                                         case '3':
-                                    //HTML_procesory(Procesory);
-                                    //HTML_plyty(Plyty);
-                                    //HTML_pamieci(Pamieci);
-                                    //HTML_graficzne(Graficzne);
-                                    //HTML_dzwiekowe(Dzwiekowe);
-                                    //HTML_sieciowe(Sieciowe);
-                                    //HTML_napedy(Napedy);
-                                    //HTML_zasilacze(Zasilacze);
+                                    HTML_procesory(Procesory);
+                                    HTML_plyty(Plyty);
+                                    HTML_pamieci(Pamieci);
+                                    HTML_graficzne(Graficzne);
+                                    HTML_dzwiekowe(Dzwiekowe);
+                                    HTML_sieciowe(Sieciowe);
+                                    HTML_napedy(Napedy);
+                                    HTML_zasilacze(Zasilacze);
                                         break;
                                         default:
                                         cout << "Wybrales nieprawidlawa opcje" << endl;
@@ -555,13 +555,13 @@ int main()
                                 switch(_getch())
                                 {
                                         case '1':
-                                        WyswietlPracownikow(Pracownicy);       
+                                        //WyswietlPracownikow(Pracownicy);       
                                         break;
                                         case '2':
-                                        Zapisz(Klienci,Pracownicy);
+                                        //Zapisz(Klienci,Pracownicy);
                                         break;
                                         case '3':
-                                    //HTML_klienci(Klienci);   
+                                    //BRAK  
                                         break;
                                         default:
                                         cout << "Wybrales nieprawidlawa opcje" << endl;
