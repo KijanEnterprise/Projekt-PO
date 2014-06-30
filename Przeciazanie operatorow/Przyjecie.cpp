@@ -1,89 +1,24 @@
 #include "Przyjecie.h"
 
-Przyjecie::Przyjecie():ilosc(0)
+Przyjecie::Przyjecie(string _producent, string _model, int _typ, int _id_przyjecia, int _id_klienta, int _id_pracownika, float _cena):
+Bazowa(_producent, _model,_cena), typ(_typ), id_przyjecia(_id_przyjecia), id_klienta(_id_klienta), id_pracownika(_id_pracownika)
+{}
+ 
+void Przyjecie::Wyswietl()
 {
-	pracownik=NULL;
-	klient=NULL;
+	cout << id_przyjecia<< "\t" << producent << "\t" << model << "\t" << typ << "\t" << id_klienta << "\t" << id_pracownika << "\t"<< cena << " zl" << endl;
 }
 
-void Przyjecie::dodajPrzyjecie(vector<Klient> &Klienci, vector<Pracownik> &Pracownicy)
+ostream &operator << (ostream &C, Przyjecie &V)
 {
-	string producent, model;
-	int idpracownika;
-	int idklienta;
-	int typ;
-	cout << "Podaj id klienta: ";
-	cin >> idklienta;
-	cout << "Podaj id pracownika: ";
-	cin >> idpracownika;
-	cout << "Podaj typ przedmiotu przyjmowanego: ";
-	cin >> typ;
-	cout << "Podaj producenta przedmiotu przyjmowanego: ";
-	cin >> producent;
-	cout << "Podaj model przedmiotu przyjmowanego: ";
-	cin >> model;
-
-	for (unsigned int i=0; i<1; i++)
-	{
-		if(idklienta==Klienci[i].getId())
-			klient=&Klienci[i];
-		if(idpracownika==Pracownicy[i].getId())
-			pracownik=&Pracownicy[i];
-	}
-
-	switch (typ){
-		case 1:
-			{
-				Procesor procesor(producent,model,0,0,0);
-				Bazowa *a = &procesor;
-				elementy.push_back(a);
-			} break;
-		case 2:
-			{
-				Plyta plyta(producent,model,"","",0);
-				Bazowa *b = &plyta;
-				elementy.push_back(b);
-			} break;
-		case 3:
-			{
-				Pamiec pamiec(producent,model,"",0,0);
-				Bazowa *c = &pamiec;
-				elementy.push_back(c);
-			} break;
-		case 4:
-			{
-				Grafika grafika(producent,model,0,0,0);
-				Bazowa *d = &grafika;
-				elementy.push_back(d);
-			} break;
-		case 5:
-			{
-				Dzwiek dzwiek(producent,model,0,0,0,0);
-				Bazowa *e = &dzwiek;
-				elementy.push_back(e);
-			} break;
-		case 6:
-			{
-				Siec siec(producent,model,0,"",0);
-				Bazowa *f = &siec;
-				elementy.push_back(f);
-			} break;
-		case 7:
-			{
-				Naped naped(producent,model,"",0,0);
-				Bazowa *g = &naped;
-				elementy.push_back(g);
-			} break;
-		case 8:
-			{
-				Zasilacz zasilacz(producent,model,0,0);
-				Bazowa *h = &zasilacz;
-				elementy.push_back(h);
-			} break;
-		}
+	return C << V.producent << " ; " << V.model << " ; " << V.typ << " ; " << V.id_przyjecia << " ; " << V.id_klienta << " ; " 
+		<< V.id_pracownika << " ; " << V.cena << endl;
 }
 
-void Przyjecie::wyswietl()
+istream &operator >> (istream &C, Przyjecie &V)
 {
-
+	string srednik;
+	C >> V.producent >> srednik >> V.model >> srednik >> V.typ >> srednik >> V.id_przyjecia >> srednik >> V.id_klienta >> srednik 
+		>> V.id_pracownika >> srednik >> V.cena; 
+	return C;
 }

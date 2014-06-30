@@ -17,16 +17,19 @@
 #include <list>
 using namespace std;
 
-class Przyjecie
+class Przyjecie: public Bazowa
 {
 private:
-	Klient * klient;
-	Pracownik * pracownik;
-	list <Bazowa*> elementy;
-	int ilosc;
-	list <Bazowa*> ::iterator it;
+	int typ;
+	int id_klienta;
+	int id_pracownika;
+	int id_przyjecia;
 public:
-	Przyjecie();
-	void wyswietl();
-	void dodajPrzyjecie(vector<Klient> &Klienci, vector<Pracownik> &Pracownicy);
+	Przyjecie(string _producent, string _model, int _typ, int _id_przyjecia, int _id_klienta, int _id_pracownika, float _cena);
+	void Wyswietl();
+	int geTtyp(){ return typ; }
+	int getIdpracownika(){ return id_pracownika;}
+	int getIdklienta(){ return id_klienta;}
+	friend ostream &operator << (ostream &C, Przyjecie &V);
+	friend istream &operator >> (istream &C, Przyjecie &V);
 };

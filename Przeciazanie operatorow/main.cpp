@@ -338,6 +338,72 @@ void HTML_zasilacze(vector<Zasilacz> Zasilacze)
 	system("html\\zasilacze.html");
 }
 
+void NowePrzyjecie()
+{
+	int id_klienta, id_pracownika, id_przyjecia=1;
+	string producent, model;
+	int typ;
+	float cena;
+	// cout << "Podaj numer zamowienia: ";
+	// cin >> id_przyjecia;
+	cout << "Podaj id klienta skladajacego zamowienie: ";
+	cin >> id_klienta;
+	cout << "Podaj id pracownika skladajacego zamowienie: ";
+	cin >> id_pracownika;
+	cin.ignore();
+	cout << "Podaj typ przedmiotu przyjmowanego: ";
+	cin >> typ; 
+	cout << "Podaj producenta przedmiotu przyjmowanego: ";
+	cin >> producent;
+	cout << "Podaj model przedmiotu przyjmowanego: ";
+	cin >> model;
+	cout << "Podaj cene przedmiotu przyjmowanego: ";
+	cin >> cena;
+
+	Przyjecie przyjecie(producent,model,typ,id_przyjecia,id_klienta,id_pracownika,cena);
+ 
+	fstream plik;
+	plik.open("zapis4.csv",std::ios::out | std::ios::app);
+ 
+	plik << id_przyjecia << ";" << przyjecie << ";" << model << ";" << typ << ";" << id_klienta << ";" << id_pracownika << ";" << cena << endl;
+ 
+	cout << "Zgloszenie przyjete i zapisane!" << endl;
+	plik.close();
+}
+ 
+void WyswietlPrzyjecia(vector<Przyjecie> &Przyjecia)
+{
+	cout << endl << "#####################" << endl;
+	cout << "### Lista przyjec ####" << endl;
+	cout << "Id przyjecia\tProducent\tModel\tTyp\tId klienta\tId pracownika\tCena" << endl;
+	for(int i=0;i<Przyjecia.size();i++) Przyjecia[i].Wyswietl();
+}
+ 
+int WybierzPrzyjecie(vector<Przyjecie> &Przyjecia)
+{
+	WyswietlPrzyjecia(Przyjecia);
+	cout << "Podaj numer przyjecia";
+	int id_przyjecia;
+	cin >> id_przyjecia;
+	return id_przyjecia;
+}
+ 
+void OdczytajPrzyjecia(vector<Przyjecie> &Przyjecia)
+{
+	string dana1,dana2;
+	int rodzaj,dana3,dana4,dana5,dana6;
+	float dana7;
+
+	ifstream plik("Przyjecia.csv");
+	while (plik>>rodzaj)
+	{
+		Przyjecie przyjecie("","",0,0,0,0,0);
+		plik >> przyjecie;
+		Przyjecia.push_back(przyjecie);		
+	}
+	plik.close();
+}
+
 // FUNKCJA MAIN (!)
 int main()
 {
@@ -357,7 +423,6 @@ int main()
 	Odczytaj(Procesory,Plyty,Pamieci,Graficzne,Dzwiekowe,Sieciowe,Napedy,Zasilacze);
 	Odczytaj(Klienci,Pracownicy);
 
-	Przyjecia[0].dodajPrzyjecie(Klienci,Pracownicy);
 
 
 	for(;;)
